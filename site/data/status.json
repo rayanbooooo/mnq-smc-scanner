@@ -1,0 +1,97 @@
+{
+  "generated_at": "2026-08-12T23:33:27.355730+00:00",
+  "generated_at_et": "2026-08-12 19:33 ET",
+  "symbol": "CME_MINI:MNQ1!",
+  "price": 29798.5,
+  "quote": {
+    "success": true,
+    "symbol": "CME_MINI:MNQ1!",
+    "time": 1786575600,
+    "open": 29797.75,
+    "high": 29817.25,
+    "low": 29792.5,
+    "close": 29798.5,
+    "last": 29798.5,
+    "volume": 11413,
+    "description": "Micro E-mini Nasdaq-100 Index Futures",
+    "exchange": "CME",
+    "type": "futures"
+  },
+  "steps": {
+    "1": {
+      "label": "HTF Solidified Breakout",
+      "status": "confirmed",
+      "detail": {
+        "index": 45,
+        "time": 1786446000,
+        "type": "H",
+        "price": 29887,
+        "confirmed": true,
+        "confirmed_at": 1786460400,
+        "confirmed_price": 29663,
+        "direction": "bullish",
+        "breakout_at": 1786536000
+      }
+    },
+    "2": {
+      "label": "Last Opposite Push (OB)",
+      "status": "identified",
+      "detail": {
+        "time": 1786536000,
+        "price": 29745
+      }
+    },
+    "3": {
+      "label": "Target High/Low Solidified",
+      "status": "pending",
+      "detail": {
+        "price": 30001.5,
+        "time": 1786539600,
+        "ref_price": 29745,
+        "confirmed": false,
+        "confirmed_at": null
+      }
+    },
+    "4": {
+      "label": "Step 2 Retrace & Shift",
+      "status": "not_reached",
+      "detail": {
+        "price_now": 29798.5,
+        "zone": 29745
+      }
+    },
+    "5": {
+      "label": "1m Micro Displacement Shift",
+      "status": "gated_to_ny_window",
+      "detail": null
+    },
+    "6": {
+      "label": "1m Retest Entry & Risk Set",
+      "status": "not_applicable",
+      "detail": null
+    }
+  },
+  "solidified_low": {
+    "index": 69,
+    "time": 1786536000,
+    "type": "L",
+    "price": 29745,
+    "confirmed": true,
+    "confirmed_at": 1786539600,
+    "confirmed_price": 29907.25
+  },
+  "solidified_high": {
+    "index": 75,
+    "time": 1786557600,
+    "type": "H",
+    "price": 29928.75,
+    "confirmed": true,
+    "confirmed_at": 1786564800,
+    "confirmed_price": 29807.25
+  },
+  "in_ny_preopen_window": false,
+  "verdict": "NO TRADE",
+  "news": [
+    "Stock Market Today: Nasdaq 100 Rises on Strong AI Earnings, Benign Inflation"
+  ]
+}

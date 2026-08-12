@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>MNQ SCANNER — Azarel 6-Step</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="brand">
+      <div class="radar"><span class="dot"></span></div>
+      <div>
+        <h1>MNQ SCANNER</h1>
+        <div class="sub">AZAREL 6-STEP SMC · MICRO E-MINI NASDAQ-100</div>
+      </div>
+    </div>
+    <div class="status-pill"><span class="led"></span><span id="last-updated">connecting…</span></div>
+  </header>
+
+  <div class="verdict notrade" id="verdict-box">
+    <div class="verdict-label">CURRENT VERDICT</div>
+    <div class="verdict-value notrade" id="verdict-value">—</div>
+    <div class="verdict-meta">
+      <span>PRICE <b id="price">—</b></span>
+      <span>SYMBOL <b id="symbol">—</b></span>
+      <span>NY PRE-OPEN WINDOW <b id="ny-window">—</b></span>
+    </div>
+  </div>
+
+  <div class="grid">
+    <div class="panel">
+      <h2>6-STEP CHECKLIST</h2>
+      <div id="steps"></div>
+    </div>
+
+    <div>
+      <div class="panel" style="margin-bottom:20px;">
+        <h2>KEY LEVELS</h2>
+        <div id="levels"></div>
+      </div>
+      <div class="panel">
+        <h2>NEWS</h2>
+        <div id="news"></div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    Local scan every 5 min via TradingView Desktop (CDP) · Not affiliated with TradingView Inc. · No automated execution — alerts &amp; analysis only
+  </footer>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
