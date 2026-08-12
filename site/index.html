@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>MNQ SCANNER — Azarel 6-Step</title>
+<title>MNQ SCANNER — Rayan 6-Step</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="style.css">
 </head>
@@ -14,7 +14,7 @@
       <div class="radar"><span class="dot"></span></div>
       <div>
         <h1>MNQ SCANNER</h1>
-        <div class="sub">AZAREL 6-STEP SMC · MICRO E-MINI NASDAQ-100</div>
+        <div class="sub">RAYAN 6-STEP SMC · MICRO E-MINI NASDAQ-100</div>
       </div>
     </div>
     <div class="status-pill"><span class="led"></span><span id="last-updated">connecting…</span></div>
@@ -45,6 +45,22 @@
         <h2>NEWS</h2>
         <div id="news"></div>
       </div>
+    </div>
+  </div>
+
+  <div class="panel explainer">
+    <h2>HOW THIS STRATEGY WORKS</h2>
+    <p><b>Core idea:</b> price only becomes a real support/resistance point ("solidified") after it gets swept and then structure breaks the other way to confirm the sweep was a trap, not real supply/demand. A raw swing high or low means nothing on its own — it has to be tested and rejected.</p>
+    <p><b>Step 1 — HTF Solidified Breakout:</b> find a Solidified High/Low on the 1H chart, then wait for price to break back through it. That break is what defines the new range and which direction (long/short) is even on the table.</p>
+    <p><b>Step 2 — Last Opposite Push:</b> the last candle/wick against the breakout direction right before it happened — this is the order block, the zone institutional flow likely originated from.</p>
+    <p><b>Step 3 — Target Solidified:</b> after the breakout runs, it needs to make a new high/low <i>and then get rejected</i> (a close back through the swing point right before that high/low) before it counts as a real target. Until that rejection happens, it's just "the current high" — not a confirmed level yet, and this dashboard will say so explicitly rather than assume it.</p>
+    <p><b>Step 4 — Retrace & Shift:</b> price needs to pull back into the Step 2 zone. Simply touching the zone isn't enough — this dashboard flags it as "watching" once price is back in range, but the actual structure shift confirmation happens on the 1-minute chart (Step 5), not automatically here.</p>
+    <p><b>Step 5 — 1m Micro Displacement:</b> inside the Step 2 zone, on the 1-minute chart, price needs to break its own recent 1m swing point with real displacement — this is what actually flips the zone from "watching" to "tradeable." This dashboard gates this step to the 30-minute pre-NY-open window and does not fabricate a 1m signal outside it.</p>
+    <p><b>Step 6 — Entry & Risk:</b> once Step 5 fires, the entry is the retest of the 1m order block found in Step 5. Stop-loss goes just beyond the 1m Solidified Low/High from that same step. Target is the Step 3 level.</p>
+    <div class="legend">
+      <span>✅ confirmed by real price action</span>
+      <span>⏳ pending / needs the next candle to prove it</span>
+      <span>❌ not reached or not applicable yet</span>
     </div>
   </div>
 

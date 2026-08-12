@@ -7,6 +7,15 @@ const STEP_LABELS = {
   "6": "1m Retest Entry & Risk Set",
 };
 
+const STEP_DESC = {
+  "1": "A prior Solidified High/Low on the 1H chart that price has broken back through — this sets the range and direction (long vs short).",
+  "2": "The last candle/wick against the move right before the breakout — the order block, where the move likely originated from.",
+  "3": "The extreme reached after the breakout. Only counts as a real target once price closes back through the swing point right before it — until then it's unconfirmed, not a fabricated level.",
+  "4": "Price needs to pull back into the Step 2 zone. \"Watching\" means it's back in range; the actual shift confirmation happens on the 1-minute chart in Step 5.",
+  "5": "Inside the Step 2 zone, the 1-minute chart needs to break its own recent swing point with real displacement. Gated to the 30-min pre-NY-open window — never simulated outside it.",
+  "6": "Entry = retest of the 1m order block from Step 5. Stop below/above the 1m Solidified Low/High. Target = the Step 3 level.",
+};
+
 const ICONS = {
   confirmed: "✅",
   identified: "✅",
@@ -77,6 +86,7 @@ async function refresh() {
       <div style="flex:1">
         <div class="step-label">${STEP_LABELS[key]}</div>
         <div class="step-detail">${stepDetailText(key, step)}</div>
+        <div class="step-detail-long">${STEP_DESC[key]}</div>
       </div>`;
     stepsEl.appendChild(row);
   }

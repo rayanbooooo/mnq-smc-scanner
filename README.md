@@ -1,6 +1,6 @@
 # MNQ SMC Scanner
 
-Live dashboard applying the Azarel Cobos 6-Step Checklist strategy to Micro E-mini Nasdaq-100 futures (MNQ1!), scanning every 5 minutes via a local TradingView Desktop connection.
+Rayan's live dashboard applying a 6-Step Smart Money Concepts checklist to Micro E-mini Nasdaq-100 futures (MNQ1!), scanning every 5 minutes via a local TradingView Desktop connection.
 
 ## How it works
 
