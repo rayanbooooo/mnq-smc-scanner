@@ -43,11 +43,13 @@ def session_windows(now_unix):
     """
     now = to_ny(now_unix)
     if now.time() >= datetime.time(18, 0):
+        # Tonight's 8pm/9pm haven't happened yet -- this is the upcoming cycle.
         evening_date = now.date()
-    elif now.time() < datetime.time(9, 30):
-        evening_date = now.date() - datetime.timedelta(days=1)
     else:
-        evening_date = now.date()  # daytime dead zone -> points at tonight
+        # Anywhere from midnight through 5:59pm (including the 9:30am-6pm
+        # dead zone) still belongs to LAST night's cycle: yesterday's 8pm/9pm
+        # plus today's 9:30am. The next cycle doesn't start until tonight's 8pm.
+        evening_date = now.date() - datetime.timedelta(days=1)
     morning_date = evening_date + datetime.timedelta(days=1)
 
     def mk(d, h, m):
