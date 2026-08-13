@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-08-13T12:43:20.363742+00:00",
-  "generated_at_et": "2026-08-13 08:43 ET",
+  "generated_at": "2026-08-13T12:44:36.602438+00:00",
+  "generated_at_et": "2026-08-13 08:44 ET",
   "symbol": "CME_MINI:MNQ1!",
-  "price": 29854.75,
+  "price": 29850,
   "quote": {
     "success": true,
     "symbol": "CME_MINI:MNQ1!",
     "time": 1786624800,
     "open": 29853.25,
-    "high": 29859,
-    "low": 29842,
-    "close": 29854.75,
-    "last": 29854.75,
-    "volume": 2130,
+    "high": 29872,
+    "low": 29836.25,
+    "close": 29850,
+    "last": 29850,
+    "volume": 7157,
     "description": "Micro E-mini Nasdaq-100 Index Futures",
     "exchange": "CME",
     "type": "futures"
@@ -231,6 +231,6 @@
     "tone": "none"
   },
   "news": [
-    "Gold prices fall Rs 2,800 per 10 grams as seven-session rally loses steam"
+    "Wall St futures tick higher as oil retreats ahead of inflation data"
   ]
 }
