@@ -67,20 +67,44 @@ header {
   gap: 12px;
 }
 
-.mark {
-  width: 38px;
-  height: 38px;
-  flex-shrink: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 9px;
-  background: linear-gradient(160deg, rgba(53,242,224,0.18), rgba(53,242,224,0.02));
+/* Radar scan icon */
+.radar {
+  position: relative;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
   border: 1px solid var(--cyan-dim);
-  color: var(--cyan);
-  font-weight: 700;
-  font-size: 16px;
+  background: radial-gradient(circle at center, rgba(53,242,224,0.12), transparent 70%);
+  flex-shrink: 0;
+  overflow: hidden;
 }
+.radar::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: conic-gradient(from 0deg, rgba(53,242,224,0.95), rgba(53,242,224,0) 35%);
+  animation: spin 2.2s linear infinite;
+  mix-blend-mode: screen;
+}
+.radar::after {
+  content: "";
+  position: absolute;
+  inset: 9px;
+  border-radius: 50%;
+  border: 1px solid rgba(53,242,224,0.3);
+}
+.radar .dot {
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 5px; height: 5px;
+  margin: -2.5px 0 0 -2.5px;
+  background: var(--cyan);
+  border-radius: 50%;
+  box-shadow: 0 0 10px 3px rgba(53,242,224,0.9);
+  z-index: 1;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
 
 .brand h1 {
   font-size: 15px;
@@ -145,6 +169,30 @@ header {
 .hero.aplus {
   border-color: rgba(62,245,138,0.45);
   box-shadow: 0 0 60px -20px rgba(62,245,138,0.35), inset 0 0 60px -35px rgba(62,245,138,0.4);
+}
+
+.hero-sweep {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+}
+.hero-sweep::after {
+  content: "";
+  position: absolute;
+  top: -20%;
+  left: -30%;
+  width: 45%;
+  height: 140%;
+  background: linear-gradient(100deg, transparent, rgba(53,242,224,0.08) 45%, rgba(53,242,224,0.14) 50%, rgba(53,242,224,0.08) 55%, transparent);
+  transform: skewX(-18deg);
+  animation: sweep 5.5s ease-in-out infinite;
+}
+@keyframes sweep {
+  0%   { left: -40%; }
+  55%  { left: 115%; }
+  100% { left: 115%; }
 }
 
 .hero-top {
