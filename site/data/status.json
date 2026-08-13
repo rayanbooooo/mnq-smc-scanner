@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-08-13T11:22:23.243390+00:00",
-  "generated_at_et": "2026-08-13 07:22 ET",
+  "generated_at": "2026-08-13T11:26:29.980088+00:00",
+  "generated_at_et": "2026-08-13 07:26 ET",
   "symbol": "CME_MINI:MNQ1!",
-  "price": 29880,
+  "price": 29858,
   "quote": {
     "success": true,
     "symbol": "CME_MINI:MNQ1!",
-    "time": 1786619100,
-    "open": 29880.25,
-    "high": 29881.75,
-    "low": 29875.5,
-    "close": 29880,
-    "last": 29880,
-    "volume": 476,
+    "time": 1786620300,
+    "open": 29863,
+    "high": 29864.25,
+    "low": 29855.25,
+    "close": 29858,
+    "last": 29858,
+    "volume": 634,
     "description": "Micro E-mini Nasdaq-100 Index Futures",
     "exchange": "CME",
     "type": "futures"
@@ -211,8 +211,8 @@
       "open_time": 1786627800,
       "search_end": 1786633200,
       "swing_high": {
-        "time": 1786616400,
-        "price": 29884.5
+        "time": 1786618800,
+        "price": 29892.25
       },
       "swing_low": {
         "time": 1786616700,
@@ -231,6 +231,6 @@
     "tone": "none"
   },
   "news": [
-    "Asian stocks rise as US inflation data dents September Fed hike bets"
+    "Wall St futures tick higher as oil retreats ahead of inflation data"
   ]
 }
