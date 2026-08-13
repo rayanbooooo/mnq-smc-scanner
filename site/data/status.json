@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-08-13T13:09:36.451116+00:00",
-  "generated_at_et": "2026-08-13 09:09 ET",
+  "generated_at": "2026-08-13T13:10:50.560574+00:00",
+  "generated_at_et": "2026-08-13 09:10 ET",
   "symbol": "CME_MINI:MNQ1!",
-  "price": 29910.5,
+  "price": 29913.75,
   "quote": {
     "success": true,
     "symbol": "CME_MINI:MNQ1!",
-    "time": 1786626300,
-    "open": 29909,
-    "high": 29914.75,
-    "low": 29905.25,
-    "close": 29910.5,
-    "last": 29910.5,
-    "volume": 6204,
+    "time": 1786626600,
+    "open": 29917.75,
+    "high": 29918.5,
+    "low": 29911,
+    "close": 29913.75,
+    "last": 29913.75,
+    "volume": 1118,
     "description": "Micro E-mini Nasdaq-100 Index Futures",
     "exchange": "CME",
     "type": "futures"
@@ -230,7 +230,5 @@
     "detail": "No session currently in play",
     "tone": "none"
   },
-  "news": [
-    "Wall St futures tick higher as oil retreats ahead of inflation data"
-  ]
+  "news": []
 }
