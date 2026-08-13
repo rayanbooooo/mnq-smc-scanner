@@ -165,23 +165,29 @@ def find_mss(bars, reversal_dir, n=MSS_FRACTAL_N):
 
 def evaluate_model1(bars, sweep, pre_bars, search_end):
     """Sweep & Displacement: reversal leg needs a qualifying displacement FVG
-    AND an MSS body-close, both before search_end."""
+    AND an MSS body-close, both before search_end. Always returns a dict (with
+    confirmed=False if the pieces aren't all there yet) so the dashboard can
+    show exactly what's still missing, not just a final yes/no."""
     reversal_dir = "down" if sweep["direction"] == "up" else "up"
     reversal_bars = [b for b in bars if b["time"] >= sweep["time"] and b["time"] < search_end]
+    base = {"model": "1", "direction": reversal_dir, "fvgs": [], "mss": None,
+            "confirmed": False, "signal_time": None, "signal_price": None}
     if len(reversal_bars) < 3:
-        return None
+        return base
 
     ref_body_median = median([abs(b["close"] - b["open"]) for b in pre_bars]) if pre_bars else 0
     raw_fvgs = find_fvgs(reversal_bars, reversal_dir)
     disp_fvgs = [g for g in raw_fvgs if any(
         is_displacement(b, ref_body_median) for b in reversal_bars if b["time"] == g["time"]
     )]
+    base["fvgs"] = disp_fvgs
     if not disp_fvgs:
-        return None
+        return base
 
     mss = find_mss(reversal_bars, reversal_dir)
+    base["mss"] = mss
     if not mss:
-        return None
+        return base
 
     # Only FVGs that existed by the moment MSS confirmed are eligible as an
     # entry reference -- otherwise re-scanning later (with more bars in the
@@ -189,30 +195,38 @@ def evaluate_model1(bars, sweep, pre_bars, search_end):
     fvgs_at_signal = [g for g in disp_fvgs if g["confirmed_at"] <= mss["confirmed_at"]] or disp_fvgs
 
     return {"model": "1", "direction": reversal_dir, "fvgs": fvgs_at_signal, "mss": mss,
-            "signal_time": mss["confirmed_at"], "signal_price": mss["confirmed_price"]}
+            "confirmed": True, "signal_time": mss["confirmed_at"], "signal_price": mss["confirmed_price"]}
 
 
 def evaluate_model2(bars, sweep, open_time, search_end):
     """Inversion FVG: the sweep leg itself must leave FVG(s) in the sweep
     direction; price must later close beyond ALL of them (the deepest/highest
-    boundary) to confirm the inversion."""
-    sweep_leg = [b for b in bars if b["time"] >= open_time and b["time"] <= sweep["time"]]
-    leg_fvgs = find_fvgs(sweep_leg, sweep["direction"])
-    if not leg_fvgs:
-        return None
-
+    boundary) to confirm the inversion. Always returns a dict (confirmed=False
+    until the inversion close happens) so the pending boundary can be shown."""
     reversal_dir = "down" if sweep["direction"] == "up" else "up"
+    base = {"model": "2", "direction": reversal_dir, "fvgs": [], "inversion_boundary": None,
+            "confirmed": False, "signal_time": None, "signal_price": None}
+
+    # A gap's confirming third candle can fall before open_time (context) or
+    # after sweep_time (if the sweep bar itself is the displacement candle) --
+    # scan all available bars, then keep only gaps whose *middle*
+    # (displacement) candle actually falls within the sweep leg itself.
+    all_fvgs = find_fvgs(bars, sweep["direction"])
+    leg_fvgs = [g for g in all_fvgs if open_time <= g["time"] <= sweep["time"]]
+    base["fvgs"] = leg_fvgs
+    if not leg_fvgs:
+        return base
+
     boundary = min(g["bottom"] for g in leg_fvgs) if sweep["direction"] == "up" else max(g["top"] for g in leg_fvgs)
+    base["inversion_boundary"] = boundary
 
     after = [b for b in bars if b["time"] > sweep["time"] and b["time"] < search_end]
     for b in after:
         if reversal_dir == "up" and b["close"] > boundary:
-            return {"model": "2", "direction": reversal_dir, "fvgs": leg_fvgs, "inversion_boundary": boundary,
-                    "signal_time": b["time"], "signal_price": b["close"]}
+            return {**base, "confirmed": True, "signal_time": b["time"], "signal_price": b["close"]}
         if reversal_dir == "down" and b["close"] < boundary:
-            return {"model": "2", "direction": reversal_dir, "fvgs": leg_fvgs, "inversion_boundary": boundary,
-                    "signal_time": b["time"], "signal_price": b["close"]}
-    return None
+            return {**base, "confirmed": True, "signal_time": b["time"], "signal_price": b["close"]}
+    return base
 
 
 def build_trade(signal, sweep):
@@ -297,7 +311,7 @@ def evaluate_session(bars, open_time, search_end, now_unix):
     result = {
         "open_time": open_time, "search_end": search_end,
         "swing_high": swing_high, "swing_low": swing_low,
-        "sweep": None, "signal": None, "trade": None, "status": "waiting_for_open",
+        "sweep": None, "watching": None, "signal": None, "trade": None, "status": "waiting_for_open",
     }
     if now_unix < open_time:
         return result
@@ -311,7 +325,10 @@ def evaluate_session(bars, open_time, search_end, now_unix):
     pre_bars = [b for b in bars if b["time"] < open_time][-LOOKBACK_BARS:]
     sig1 = evaluate_model1(bars, sweep, pre_bars, min(search_end, now_unix))
     sig2 = evaluate_model2(bars, sweep, open_time, min(search_end, now_unix))
-    signal = min([s for s in (sig1, sig2) if s], key=lambda s: s["signal_time"], default=None)
+    result["watching"] = {"model1": sig1, "model2": sig2}
+
+    confirmed = [s for s in (sig1, sig2) if s["confirmed"]]
+    signal = min(confirmed, key=lambda s: s["signal_time"], default=None)
 
     if not signal:
         result["status"] = "expired_no_reversal" if now_unix >= search_end else "watching_for_reversal"

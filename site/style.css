@@ -447,6 +447,29 @@ header {
   color: var(--text-dim);
 }
 
+.watch-box {
+  margin-top: 12px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px dashed rgba(245,184,62,0.35);
+  background: rgba(245,184,62,0.04);
+}
+.watch-title {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: var(--amber);
+  margin-bottom: 8px;
+}
+.watch-line {
+  font-size: 12px;
+  line-height: 1.55;
+  color: var(--text-dim);
+}
+.watch-line:not(:last-child) { margin-bottom: 8px; }
+.watch-line b { color: var(--text); }
+.watch-line i { color: var(--cyan); font-style: normal; }
+
 /* ---------- Key Requirements ---------- */
 .reqs { display: flex; flex-direction: column; }
 .req-row {

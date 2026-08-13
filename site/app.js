@@ -42,6 +42,38 @@ function badgeHtml(badge) {
   return `<span class="badge badge-${badge.tone}">${badge.text}</span>`;
 }
 
+function watchingHtml(session) {
+  if (session.status === "waiting_for_sweep" && session.swing_high && session.swing_low) {
+    return `<div class="watch-box">
+      <div class="watch-title">Looking for</div>
+      <div class="watch-line">A sweep above <b>${fmtPrice(session.swing_high.price)}</b> or below <b>${fmtPrice(session.swing_low.price)}</b> to open this session's setup.</div>
+    </div>`;
+  }
+  if (!session.watching) return "";
+  const dir = session.sweep.direction === "up" ? "bearish (short)" : "bullish (long)";
+  const lines = [];
+  const m1 = session.watching.model1, m2 = session.watching.model2;
+
+  if (m1 && !m1.confirmed) {
+    if (!m1.fvgs.length) {
+      lines.push(`<b>Model 1:</b> no displacement Fair Value Gap yet in the ${dir} reversal — needs a large-bodied candle to leave one.`);
+    } else if (!m1.mss) {
+      const fvg = m1.fvgs[0];
+      lines.push(`<b>Model 1:</b> FVG formed at ${fmtPrice(fvg.bottom)}–${fmtPrice(fvg.top)} — watching for a candle <i>body</i> close beyond the post-sweep pivot to confirm the structure shift.`);
+    }
+  }
+  if (m2 && !m2.confirmed) {
+    if (!m2.fvgs.length) {
+      lines.push(`<b>Model 2:</b> the sweep leg left no Fair Value Gap — no inversion setup available this session.`);
+    } else {
+      const verb = m2.direction === "up" ? "above" : "below";
+      lines.push(`<b>Model 2:</b> watching for a candle to <i>close</i> ${verb} <b>${fmtPrice(m2.inversion_boundary)}</b> to confirm the inversion.`);
+    }
+  }
+  if (!lines.length) return "";
+  return `<div class="watch-box"><div class="watch-title">Looking for</div>${lines.map(l => `<div class="watch-line">${l}</div>`).join("")}</div>`;
+}
+
 function renderSession(key, session) {
   const label = SESSION_LABELS[key];
   const badge = session.trade ? (TRADE_BADGE[session.trade.status] || STATUS_BADGE[session.status]) : STATUS_BADGE[session.status];
@@ -96,7 +128,7 @@ function renderSession(key, session) {
         ${badgeHtml(badge)}
       </div>
       ${rowsHtml}
-      ${tradeHtml}
+      ${session.trade ? tradeHtml : watchingHtml(session)}
     </div>`;
 }
 
