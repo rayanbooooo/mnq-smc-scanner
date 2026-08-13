@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-08-13T01:39:15.877710+00:00",
-  "generated_at_et": "2026-08-12 21:39 ET",
+  "generated_at": "2026-08-13T01:40:29.430277+00:00",
+  "generated_at_et": "2026-08-12 21:40 ET",
   "symbol": "CME_MINI:MNQ1!",
-  "price": 29836.5,
+  "price": 29835.5,
   "quote": {
     "success": true,
     "symbol": "CME_MINI:MNQ1!",
-    "time": 1786584900,
-    "open": 29836,
-    "high": 29843.75,
-    "low": 29835.25,
-    "close": 29836.5,
-    "last": 29836.5,
-    "volume": 2063,
+    "time": 1786585200,
+    "open": 29840,
+    "high": 29840.25,
+    "low": 29835,
+    "close": 29835.5,
+    "last": 29835.5,
+    "volume": 121,
     "description": "Micro E-mini Nasdaq-100 Index Futures",
     "exchange": "CME",
     "type": "futures"
@@ -90,7 +90,7 @@
           "direction": "up",
           "fvgs": [
             {
-              "top": 29835.25,
+              "top": 29834,
               "bottom": 29828.5,
               "time": 1786584600,
               "confirmed_at": 1786584900
@@ -100,11 +100,11 @@
             "pivot_time": 1786584300,
             "pivot_price": 29808.25,
             "confirmed_at": 1786584900,
-            "confirmed_price": 29836.5
+            "confirmed_price": 29840
           },
           "confirmed": true,
           "signal_time": 1786584900,
-          "signal_price": 29836.5
+          "signal_price": 29840
         },
         "model2": {
           "model": "2",
@@ -121,7 +121,7 @@
         "direction": "up",
         "fvgs": [
           {
-            "top": 29835.25,
+            "top": 29834,
             "bottom": 29828.5,
             "time": 1786584600,
             "confirmed_at": 1786584900
@@ -131,11 +131,11 @@
           "pivot_time": 1786584300,
           "pivot_price": 29808.25,
           "confirmed_at": 1786584900,
-          "confirmed_price": 29836.5
+          "confirmed_price": 29840
         },
         "confirmed": true,
         "signal_time": 1786584900,
-        "signal_price": 29836.5
+        "signal_price": 29840
       },
       "trade": {
         "model": "1",
