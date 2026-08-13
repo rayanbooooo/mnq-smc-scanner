@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-08-12T23:56:14.200361+00:00",
-  "generated_at_et": "2026-08-12 19:56 ET",
+  "generated_at": "2026-08-13T00:01:28.692036+00:00",
+  "generated_at_et": "2026-08-12 20:01 ET",
   "symbol": "CME_MINI:MNQ1!",
-  "price": 29803.25,
+  "price": 29824,
   "quote": {
     "success": true,
     "symbol": "CME_MINI:MNQ1!",
-    "time": 1786575600,
-    "open": 29797.75,
-    "high": 29817.25,
-    "low": 29792.5,
-    "close": 29803.25,
-    "last": 29803.25,
-    "volume": 21097,
+    "time": 1786579200,
+    "open": 29805,
+    "high": 29825.5,
+    "low": 29796.5,
+    "close": 29824,
+    "last": 29824,
+    "volume": 3052,
     "description": "Micro E-mini Nasdaq-100 Index Futures",
     "exchange": "CME",
     "type": "futures"
@@ -22,7 +22,7 @@
       "label": "HTF Solidified Breakout",
       "status": "confirmed",
       "detail": {
-        "index": 45,
+        "index": 44,
         "time": 1786446000,
         "type": "H",
         "price": 29887,
@@ -56,7 +56,7 @@
       "label": "Step 2 Retrace & Shift",
       "status": "not_reached",
       "detail": {
-        "price_now": 29803.25,
+        "price_now": 29824,
         "zone": 29745
       }
     },
@@ -72,7 +72,7 @@
     }
   },
   "solidified_low": {
-    "index": 69,
+    "index": 68,
     "time": 1786536000,
     "type": "L",
     "price": 29745,
@@ -81,7 +81,7 @@
     "confirmed_price": 29907.25
   },
   "solidified_high": {
-    "index": 75,
+    "index": 74,
     "time": 1786557600,
     "type": "H",
     "price": 29928.75,
