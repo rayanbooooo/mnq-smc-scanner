@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-08-13T01:24:27.547715+00:00",
-  "generated_at_et": "2026-08-12 21:24 ET",
+  "generated_at": "2026-08-13T01:25:41.720465+00:00",
+  "generated_at_et": "2026-08-12 21:25 ET",
   "symbol": "CME_MINI:MNQ1!",
-  "price": 29829.75,
+  "price": 29824.25,
   "quote": {
     "success": true,
     "symbol": "CME_MINI:MNQ1!",
-    "time": 1786584000,
-    "open": 29834.75,
-    "high": 29835.5,
-    "low": 29821.75,
-    "close": 29829.75,
-    "last": 29829.75,
-    "volume": 2257,
+    "time": 1786584300,
+    "open": 29828.5,
+    "high": 29828.5,
+    "low": 29822.25,
+    "close": 29824.25,
+    "last": 29824.25,
+    "volume": 232,
     "description": "Micro E-mini Nasdaq-100 Index Futures",
     "exchange": "CME",
     "type": "futures"
@@ -43,6 +43,26 @@
         "extreme": 29856.5,
         "swept_level": 29816.25
       },
+      "watching": {
+        "model1": {
+          "model": "1",
+          "direction": "down",
+          "fvgs": [],
+          "mss": null,
+          "confirmed": false,
+          "signal_time": null,
+          "signal_price": null
+        },
+        "model2": {
+          "model": "2",
+          "direction": "down",
+          "fvgs": [],
+          "inversion_boundary": null,
+          "confirmed": false,
+          "signal_time": null,
+          "signal_price": null
+        }
+      },
       "signal": null,
       "trade": null,
       "status": "watching_for_reversal"
@@ -64,6 +84,26 @@
         "extreme": 29821.25,
         "swept_level": 29826.75
       },
+      "watching": {
+        "model1": {
+          "model": "1",
+          "direction": "up",
+          "fvgs": [],
+          "mss": null,
+          "confirmed": false,
+          "signal_time": null,
+          "signal_price": null
+        },
+        "model2": {
+          "model": "2",
+          "direction": "up",
+          "fvgs": [],
+          "inversion_boundary": null,
+          "confirmed": false,
+          "signal_time": null,
+          "signal_price": null
+        }
+      },
       "signal": null,
       "trade": null,
       "status": "watching_for_reversal"
@@ -80,6 +120,7 @@
         "price": 29821.25
       },
       "sweep": null,
+      "watching": null,
       "signal": null,
       "trade": null,
       "status": "waiting_for_open"
