@@ -1,30 +1,22 @@
-const STEP_LABELS = {
-  "1": "HTF Solidified Breakout",
-  "2": "Last Opposite Push (OB)",
-  "3": "Target High/Low Solidified",
-  "4": "Step 2 Retrace & Shift",
-  "5": "1m Micro Displacement Shift",
-  "6": "1m Retest Entry & Risk Set",
+const SESSION_LABELS = { "8pm": "8:00 PM Open", "9pm": "9:00 PM Open", "930am": "9:30 AM Open" };
+
+const STATUS_BADGE = {
+  waiting_for_open: { text: "UPCOMING", tone: "dim" },
+  waiting_for_sweep: { text: "WATCHING RANGE", tone: "amber" },
+  expired_no_sweep: { text: "NO SWEEP", tone: "dim" },
+  watching_for_reversal: { text: "AWAITING REVERSAL", tone: "amber" },
+  expired_no_reversal: { text: "NO REVERSAL", tone: "dim" },
+  overlap_skipped: { text: "SKIPPED — OVERLAP", tone: "dim" },
+  invalid_trade_geometry: { text: "INVALID SETUP", tone: "dim" },
 };
 
-const STEP_DESC = {
-  "1": "A prior Solidified High/Low on the 1H chart that price has broken back through — this sets the range and direction (long vs short).",
-  "2": "The last candle/wick against the move right before the breakout — the order block, where the move likely originated from.",
-  "3": "The extreme reached after the breakout. Only counts as a real target once price closes back through the swing point right before it — until then it's unconfirmed, not a fabricated level.",
-  "4": "Price needs to pull back into the Step 2 zone. \"Watching\" means it's back in range; the actual shift confirmation happens on the 1-minute chart in Step 5.",
-  "5": "Inside the Step 2 zone, the 1-minute chart needs to break its own recent swing point with real displacement. Gated to the 30-min pre-NY-open window — never simulated outside it.",
-  "6": "Entry = retest of the 1m order block from Step 5. Stop below/above the 1m Solidified Low/High. Target = the Step 3 level.",
-};
-
-const ICONS = {
-  confirmed: "✅",
-  identified: "✅",
-  pending: "⏳",
-  watching: "⏳",
-  gated_to_ny_window: "⏳",
-  not_reached: "❌",
-  not_applicable: "❌",
-  none: "❌",
+const TRADE_BADGE = {
+  pending_entry: { text: "LIMIT PENDING", tone: "amber" },
+  open: { text: "TRADE OPEN", tone: "live" },
+  breakeven_exit: { text: "CLOSED @ BREAKEVEN", tone: "dim" },
+  stopped_out: { text: "STOPPED OUT", tone: "red" },
+  target_hit: { text: "TARGET HIT", tone: "green" },
+  overlap_skipped: { text: "SKIPPED — OVERLAP", tone: "dim" },
 };
 
 function timeAgo(iso) {
@@ -40,14 +32,72 @@ function fmtPrice(p) {
   return p.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 }
 
-function stepDetailText(key, step) {
-  const d = step.detail;
-  if (!d) return "";
-  if (key === "1" && d.price) return `${d.direction === "bullish" ? "Broke above" : "Broke below"} ${fmtPrice(d.price)}`;
-  if (key === "2" && d.price) return `Push level ${fmtPrice(d.price)}`;
-  if (key === "3" && d.price) return `${fmtPrice(d.price)}${d.confirmed ? " — confirmed" : " — unconfirmed"}`;
-  if (key === "4" && d.zone) return `Zone ${fmtPrice(d.zone)} · price now ${fmtPrice(d.price_now)}`;
-  return "";
+const nyTimeFmt = new Intl.DateTimeFormat("en-US", { timeZone: "America/New_York", hour: "numeric", minute: "2-digit" });
+function fmtNyTime(unixSeconds) {
+  if (unixSeconds === null || unixSeconds === undefined) return "—";
+  return nyTimeFmt.format(new Date(unixSeconds * 1000));
+}
+
+function badgeHtml(badge) {
+  return `<span class="badge badge-${badge.tone}">${badge.text}</span>`;
+}
+
+function renderSession(key, session) {
+  const label = SESSION_LABELS[key];
+  const badge = session.trade ? (TRADE_BADGE[session.trade.status] || STATUS_BADGE[session.status]) : STATUS_BADGE[session.status];
+
+  const rows = [];
+  if (session.swing_high) rows.push(["Pre-session high", fmtPrice(session.swing_high.price), fmtNyTime(session.swing_high.time)]);
+  if (session.swing_low) rows.push(["Pre-session low", fmtPrice(session.swing_low.price), fmtNyTime(session.swing_low.time)]);
+  if (session.sweep) {
+    rows.push([`Sweep (${session.sweep.direction === "up" ? "above high" : "below low"})`, fmtPrice(session.sweep.extreme), fmtNyTime(session.sweep.time)]);
+  }
+  if (session.signal) {
+    const s = session.signal;
+    const fvg = s.fvgs && s.fvgs[0];
+    rows.push([`Model ${s.model} signal`, fmtPrice(s.signal_price), fmtNyTime(s.signal_time)]);
+    if (fvg) rows.push(["FVG zone", `${fmtPrice(fvg.bottom)} – ${fmtPrice(fvg.top)}`, ""]);
+  }
+
+  let tradeHtml = "";
+  if (session.trade) {
+    const t = session.trade;
+    const dirClass = t.direction === "long" ? "long" : "short";
+    tradeHtml = `
+      <div class="trade-box ${dirClass}">
+        <div class="trade-head">
+          <span class="trade-dir">${t.direction.toUpperCase()}</span>
+          <span class="trade-model">Model ${t.model} · ${t.entry_type === "market_close" ? "market" : "limit"}</span>
+        </div>
+        <div class="trade-levels">
+          <div><span>Entry</span><b>${fmtPrice(t.entry)}</b></div>
+          <div><span>Stop</span><b>${fmtPrice(t.stop)}</b></div>
+          <div><span>Target</span><b>${fmtPrice(t.target)}</b></div>
+          <div><span>BE trigger</span><b>${fmtPrice(t.breakeven_trigger)}</b></div>
+        </div>
+        ${t.be_moved ? '<div class="trade-note">Stop moved to breakeven</div>' : ""}
+        ${t.exit_price !== null ? `<div class="trade-note">Closed at ${fmtPrice(t.exit_price)} · ${fmtNyTime(t.exit_time)}</div>` : ""}
+      </div>`;
+  }
+
+  const rowsHtml = rows.map(([name, value, time]) => `
+    <div class="sess-row">
+      <span class="sess-name">${name}</span>
+      <span class="sess-value">${value}${time ? ` <span class="sess-time">${time}</span>` : ""}</span>
+    </div>`).join("");
+
+  return `
+    <div class="session-card">
+      <div class="session-head">
+        <div>
+          <div class="session-label">${label}</div>
+          <div class="session-open">opens ${fmtNyTime(session.open_time)} ET</div>
+        </div>
+        ${badgeHtml(badge)}
+      </div>
+      ${rowsHtml}
+      ${tradeHtml}
+    </div>`;
 }
 
 const STATUS_URL = "https://raw.githubusercontent.com/rayanbooooo/mnq-smc-scanner/main/site/data/status.json";
@@ -77,48 +127,19 @@ async function refresh() {
   lastPrice = data.price;
 
   document.getElementById("symbol").textContent = (data.symbol || "").replace("CME_MINI:", "");
-  document.getElementById("ny-window").textContent = data.in_ny_preopen_window ? "ACTIVE" : "closed";
-  document.getElementById("ny-chip").classList.toggle("active", !!data.in_ny_preopen_window);
+  document.getElementById("trading-day").textContent = data.trading_day || "—";
 
   const box = document.getElementById("verdict-box");
   const val = document.getElementById("verdict-value");
-  const isAplus = data.verdict === "A++ SETUP";
-  box.className = "hero " + (isAplus ? "aplus" : "notrade");
-  val.className = "verdict-value " + (isAplus ? "aplus" : "notrade");
-  val.textContent = data.verdict || "—";
+  const detail = document.getElementById("verdict-detail");
+  const verdict = data.verdict || { headline: "—", detail: "", tone: "none" };
+  box.className = "hero " + verdict.tone;
+  val.className = "verdict-value " + verdict.tone;
+  val.textContent = verdict.headline;
+  detail.textContent = verdict.detail || "";
 
-  const stepsEl = document.getElementById("steps");
-  stepsEl.innerHTML = "";
-  for (const key of ["1", "2", "3", "4", "5", "6"]) {
-    const step = data.steps[key];
-    if (!step) continue;
-    const icon = ICONS[step.status] || "❌";
-    const row = document.createElement("div");
-    row.className = "step-row";
-    row.innerHTML = `
-      <div class="step-icon ${step.status}">${icon}</div>
-      <div class="step-num">${key}</div>
-      <div style="flex:1">
-        <div class="step-label">${STEP_LABELS[key]}</div>
-        <div class="step-detail">${stepDetailText(key, step)}</div>
-        <div class="step-detail-long">${STEP_DESC[key]}</div>
-      </div>`;
-    stepsEl.appendChild(row);
-  }
-
-  const levelsEl = document.getElementById("levels");
-  levelsEl.innerHTML = "";
-  const levels = [];
-  if (data.solidified_high) levels.push(["Solidified High", data.solidified_high.price]);
-  if (data.solidified_low) levels.push(["Solidified Low", data.solidified_low.price]);
-  if (data.steps["2"] && data.steps["2"].detail) levels.push(["Step 2 Order Block", data.steps["2"].detail.price]);
-  if (data.steps["3"] && data.steps["3"].detail) levels.push(["Step 3 Target", data.steps["3"].detail.price]);
-  for (const [name, price] of levels) {
-    const row = document.createElement("div");
-    row.className = "level-row";
-    row.innerHTML = `<span class="level-name">${name}</span><span class="level-price">${fmtPrice(price)}</span>`;
-    levelsEl.appendChild(row);
-  }
+  const sessionsEl = document.getElementById("sessions");
+  sessionsEl.innerHTML = ["8pm", "9pm", "930am"].map(key => renderSession(key, data.sessions[key])).join("");
 
   const newsEl = document.getElementById("news");
   newsEl.innerHTML = "";
