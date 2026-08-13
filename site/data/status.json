@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-08-13T03:52:52.700745+00:00",
-  "generated_at_et": "2026-08-12 23:52 ET",
+  "generated_at": "2026-08-13T05:16:34.162247+00:00",
+  "generated_at_et": "2026-08-13 01:16 ET",
   "symbol": "CME_MINI:MNQ1!",
-  "price": 29879.5,
+  "price": 29879,
   "quote": {
     "success": true,
     "symbol": "CME_MINI:MNQ1!",
@@ -10,9 +10,9 @@
     "open": 29876.5,
     "high": 29880.25,
     "low": 29876,
-    "close": 29879.5,
-    "last": 29879.5,
-    "volume": 403,
+    "close": 29879,
+    "last": 29879,
+    "volume": 482,
     "description": "Micro E-mini Nasdaq-100 Index Futures",
     "exchange": "CME",
     "type": "futures"
@@ -47,11 +47,23 @@
         "model1": {
           "model": "1",
           "direction": "down",
-          "fvgs": [],
-          "mss": null,
-          "confirmed": false,
-          "signal_time": null,
-          "signal_price": null
+          "fvgs": [
+            {
+              "top": 29858.75,
+              "bottom": 29856.75,
+              "time": 1786588200,
+              "confirmed_at": 1786588500
+            }
+          ],
+          "mss": {
+            "pivot_time": 1786579500,
+            "pivot_price": 29864.25,
+            "confirmed_at": 1786580100,
+            "confirmed_price": 29861.25
+          },
+          "confirmed": true,
+          "signal_time": 1786580100,
+          "signal_price": 29861.25
         },
         "model2": {
           "model": "2",
@@ -70,9 +82,43 @@
           "signal_price": null
         }
       },
-      "signal": null,
-      "trade": null,
-      "status": "watching_for_reversal"
+      "signal": {
+        "model": "1",
+        "direction": "down",
+        "fvgs": [
+          {
+            "top": 29858.75,
+            "bottom": 29856.75,
+            "time": 1786588200,
+            "confirmed_at": 1786588500
+          }
+        ],
+        "mss": {
+          "pivot_time": 1786579500,
+          "pivot_price": 29864.25,
+          "confirmed_at": 1786580100,
+          "confirmed_price": 29861.25
+        },
+        "confirmed": true,
+        "signal_time": 1786580100,
+        "signal_price": 29861.25
+      },
+      "trade": {
+        "model": "1",
+        "direction": "short",
+        "entry": 29861.25,
+        "entry_type": "market_close",
+        "entry_signal_time": 1786580100,
+        "stop": 29861.5,
+        "breakeven_trigger": 29861.0,
+        "target": 29860.75,
+        "risk_points": 0.25,
+        "status": "target_hit",
+        "be_moved": true,
+        "exit_price": 29860.75,
+        "exit_time": 1786580100
+      },
+      "status": "trade"
     },
     "9pm": {
       "open_time": 1786582800,
@@ -165,12 +211,12 @@
       "open_time": 1786627800,
       "search_end": 1786633200,
       "swing_high": {
-        "time": 1786586400,
-        "price": 29872
+        "time": 1786590900,
+        "price": 29879.5
       },
       "swing_low": {
-        "time": 1786585500,
-        "price": 29828
+        "time": 1786591800,
+        "price": 29865.5
       },
       "sweep": null,
       "watching": null,
@@ -180,9 +226,9 @@
     }
   },
   "verdict": {
-    "headline": "WATCHING",
-    "detail": "8:00 PM Open swept, awaiting reversal",
-    "tone": "watching"
+    "headline": "NO ACTIVE SETUP",
+    "detail": "No session currently in play",
+    "tone": "none"
   },
   "news": [
     "Stock Market Today: Nasdaq 100 Rises on Strong AI Earnings, Benign Inflation"
