@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-08-13T13:46:52.601950+00:00",
-  "generated_at_et": "2026-08-13 09:46 ET",
+  "generated_at": "2026-08-13T13:48:07.174045+00:00",
+  "generated_at_et": "2026-08-13 09:48 ET",
   "symbol": "CME_MINI:MNQ1!",
-  "price": 30094.75,
+  "price": 30108.5,
   "quote": {
     "success": true,
     "symbol": "CME_MINI:MNQ1!",
     "time": 1786628700,
     "open": 30012.75,
-    "high": 30096,
+    "high": 30113.5,
     "low": 30005.5,
-    "close": 30094.75,
-    "last": 30094.75,
-    "volume": 30197,
+    "close": 30108.5,
+    "last": 30108.5,
+    "volume": 41252,
     "description": "Micro E-mini Nasdaq-100 Index Futures",
     "exchange": "CME",
     "type": "futures"
@@ -261,5 +261,7 @@
     "detail": "9:30 AM Open swept, awaiting reversal",
     "tone": "watching"
   },
-  "news": []
+  "news": [
+    "Stock Market Today: S&P 500, Dow Futures Rise, Nasdaq Falls as July Inflation Cools\u2014Cisco Systems, Netflix, Applied Materials in Focus (UPDATED)"
+  ]
 }
