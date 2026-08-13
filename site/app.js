@@ -50,25 +50,40 @@ function stepDetailText(key, step) {
   return "";
 }
 
+const STATUS_URL = "https://raw.githubusercontent.com/rayanbooooo/mnq-smc-scanner/main/site/data/status.json";
+let lastPrice = null;
+
 async function refresh() {
   let data;
   try {
-    const res = await fetch(`data/status.json?t=${Date.now()}`, { cache: "no-store" });
+    const res = await fetch(`${STATUS_URL}?t=${Date.now()}`, { cache: "no-store" });
     data = await res.json();
+    document.querySelector(".live-badge").classList.remove("offline");
   } catch (e) {
     document.getElementById("last-updated").textContent = "connection lost";
+    document.querySelector(".live-badge").classList.add("offline");
     return;
   }
 
   document.getElementById("last-updated").textContent = `updated ${timeAgo(data.generated_at)} · ${data.generated_at_et}`;
-  document.getElementById("price").textContent = fmtPrice(data.price);
+
+  const priceEl = document.getElementById("price");
+  priceEl.textContent = fmtPrice(data.price);
+  if (lastPrice !== null && data.price !== lastPrice) {
+    priceEl.classList.remove("flash-up", "flash-down");
+    void priceEl.offsetWidth;
+    priceEl.classList.add(data.price > lastPrice ? "flash-up" : "flash-down");
+  }
+  lastPrice = data.price;
+
   document.getElementById("symbol").textContent = (data.symbol || "").replace("CME_MINI:", "");
   document.getElementById("ny-window").textContent = data.in_ny_preopen_window ? "ACTIVE" : "closed";
+  document.getElementById("ny-chip").classList.toggle("active", !!data.in_ny_preopen_window);
 
   const box = document.getElementById("verdict-box");
   const val = document.getElementById("verdict-value");
   const isAplus = data.verdict === "A++ SETUP";
-  box.className = "verdict " + (isAplus ? "aplus" : "notrade");
+  box.className = "hero " + (isAplus ? "aplus" : "notrade");
   val.className = "verdict-value " + (isAplus ? "aplus" : "notrade");
   val.textContent = data.verdict || "—";
 
@@ -120,4 +135,4 @@ async function refresh() {
 }
 
 refresh();
-setInterval(refresh, 30000);
+setInterval(refresh, 10000);

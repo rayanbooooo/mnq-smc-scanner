@@ -7,11 +7,12 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<div class="bg-fx"></div>
 <div class="wrap">
 
   <header>
     <div class="brand">
-      <div class="radar"><span class="dot"></span></div>
+      <div class="mark">M</div>
       <div>
         <h1>MNQ SCANNER</h1>
         <div class="sub">RAYAN 6-STEP SMC · MICRO E-MINI NASDAQ-100</div>
@@ -20,15 +21,31 @@
     <div class="status-pill"><span class="led"></span><span id="last-updated">connecting…</span></div>
   </header>
 
-  <div class="verdict notrade" id="verdict-box">
-    <div class="verdict-label">CURRENT VERDICT</div>
-    <div class="verdict-value notrade" id="verdict-value">—</div>
-    <div class="verdict-meta">
-      <span>PRICE <b id="price">—</b></span>
-      <span>SYMBOL <b id="symbol">—</b></span>
-      <span>NY PRE-OPEN WINDOW <b id="ny-window">—</b></span>
+  <section class="hero" id="verdict-box">
+    <div class="hero-glow"></div>
+    <div class="hero-top">
+      <div class="hero-tag">CURRENT VERDICT</div>
+      <div class="live-badge"><span class="live-dot"></span>LIVE</div>
     </div>
-  </div>
+    <div class="hero-verdict" id="verdict-value">—</div>
+
+    <div class="hero-price-row">
+      <div class="hero-price-block">
+        <div class="hero-price-label">MNQ1!</div>
+        <div class="hero-price" id="price">—</div>
+      </div>
+      <div class="hero-chips">
+        <div class="chip">
+          <span class="chip-label">Symbol</span>
+          <span class="chip-value" id="symbol">—</span>
+        </div>
+        <div class="chip" id="ny-chip">
+          <span class="chip-label">NY Pre-Open Window</span>
+          <span class="chip-value" id="ny-window">—</span>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <div class="grid">
     <div class="panel">
@@ -36,8 +53,8 @@
       <div id="steps"></div>
     </div>
 
-    <div>
-      <div class="panel" style="margin-bottom:20px;">
+    <div class="side-col">
+      <div class="panel">
         <h2>KEY LEVELS</h2>
         <div id="levels"></div>
       </div>
@@ -65,7 +82,7 @@
   </div>
 
   <footer>
-    Local scan every 5 min via TradingView Desktop (CDP) · Not affiliated with TradingView Inc. · No automated execution — alerts &amp; analysis only
+    Local scan every ~60s via TradingView Desktop (CDP) · Not affiliated with TradingView Inc. · No automated execution — alerts &amp; analysis only
   </footer>
 </div>
 

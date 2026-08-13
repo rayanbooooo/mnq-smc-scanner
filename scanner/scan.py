@@ -14,13 +14,13 @@ Step 2 zone, and leaves the "is this actually a clean shift" call to a human
 (or a future, more careful pass) rather than guessing.
 """
 import json
+import shutil
 import subprocess
 import sys
 import datetime
 import os
 
-TV_CLI = [sys.executable.replace("python3", "node")] if False else None
-NODE_BIN = "node"
+NODE_BIN = shutil.which("node") or "/usr/local/bin/node"
 CLI_PATH = os.path.expanduser("~/tradingview-mcp/src/cli/index.js")
 REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 STATUS_PATH = os.path.join(REPO_ROOT, "site", "data", "status.json")

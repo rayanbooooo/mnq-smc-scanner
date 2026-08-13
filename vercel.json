@@ -1,3 +1,4 @@
 {
-  "outputDirectory": "site"
+  "outputDirectory": "site",
+  "ignoreCommand": "git diff --quiet HEAD^ HEAD -- . ':(exclude)site/data/status.json'"
 }
