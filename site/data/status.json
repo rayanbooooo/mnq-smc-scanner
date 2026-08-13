@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-08-13T01:12:04.091661+00:00",
-  "generated_at_et": "2026-08-12 21:12 ET",
+  "generated_at": "2026-08-13T01:13:18.562811+00:00",
+  "generated_at_et": "2026-08-12 21:13 ET",
   "symbol": "CME_MINI:MNQ1!",
-  "price": 29842.5,
+  "price": 29834.25,
   "quote": {
     "success": true,
     "symbol": "CME_MINI:MNQ1!",
     "time": 1786583400,
     "open": 29841.75,
     "high": 29852.25,
-    "low": 29839.5,
-    "close": 29842.5,
-    "last": 29842.5,
-    "volume": 2149,
+    "low": 29831,
+    "close": 29834.25,
+    "last": 29834.25,
+    "volume": 3304,
     "description": "Micro E-mini Nasdaq-100 Index Futures",
     "exchange": "CME",
     "type": "futures"
@@ -85,7 +85,11 @@
       "status": "waiting_for_open"
     }
   },
-  "verdict": "WATCHING \u2014 8:00 PM Open swept, awaiting reversal",
+  "verdict": {
+    "headline": "WATCHING",
+    "detail": "8:00 PM Open swept, awaiting reversal",
+    "tone": "watching"
+  },
   "news": [
     "Stock Market Today: Nasdaq 100 Rises on Strong AI Earnings, Benign Inflation"
   ]
