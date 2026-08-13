@@ -255,7 +255,7 @@ header {
   font-weight: 800;
   letter-spacing: 0.5px;
   line-height: 1.05;
-  margin: 4px 0 26px;
+  margin: 4px 0 6px;
 }
 .hero-verdict.long { color: var(--green); text-shadow: 0 0 30px rgba(62,245,138,0.55); }
 .hero-verdict.short { color: var(--red); text-shadow: 0 0 30px rgba(255,77,106,0.55); }
@@ -265,7 +265,7 @@ header {
 .hero-verdict-detail {
   font-size: 13px;
   color: var(--text-dim);
-  margin: -18px 0 26px;
+  margin: 0 0 26px;
 }
 
 .hero-price-row {
