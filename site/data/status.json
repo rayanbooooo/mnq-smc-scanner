@@ -1,20 +1,20 @@
 {
-  "generated_at": "2026-08-14T23:51:40.041728+00:00",
-  "generated_at_et": "2026-08-14 19:51 ET",
-  "symbol": "COMEX:GC1!",
-  "price": 4432,
+  "generated_at": "2026-08-14T23:52:56.284391+00:00",
+  "generated_at_et": "2026-08-14 19:52 ET",
+  "symbol": "CME_MINI:MNQ1!",
+  "price": 30154.75,
   "quote": {
     "success": true,
-    "symbol": "COMEX:GC1!",
-    "time": 1786740300,
-    "open": 4430.9,
-    "high": 4432.1,
-    "low": 4430.4,
-    "close": 4432,
-    "last": 4432,
-    "volume": 254,
-    "description": "Gold Futures",
-    "exchange": "COMEX",
+    "symbol": "CME_MINI:MNQ1!",
+    "time": 1786740900,
+    "open": 30144.75,
+    "high": 30154.75,
+    "low": 30143.75,
+    "close": 30154.75,
+    "last": 30154.75,
+    "volume": 1352,
+    "description": "Micro E-mini Nasdaq-100 Index Futures",
+    "exchange": "CME",
     "type": "futures"
   },
   "trading_day": "2026-08-15",
@@ -30,12 +30,12 @@
       "open_time": 1786752000,
       "search_end": 1786766400,
       "swing_high": {
-        "time": 1786736700,
-        "price": 4435.6
+        "time": 1786737600,
+        "price": 30153
       },
       "swing_low": {
-        "time": 1786737600,
-        "price": 4426.9
+        "time": 1786739100,
+        "price": 30126.5
       },
       "sweep": null,
       "watching": null,
@@ -47,12 +47,12 @@
       "open_time": 1786755600,
       "search_end": 1786766400,
       "swing_high": {
-        "time": 1786736700,
-        "price": 4435.6
+        "time": 1786737600,
+        "price": 30153
       },
       "swing_low": {
-        "time": 1786737600,
-        "price": 4426.9
+        "time": 1786739100,
+        "price": 30126.5
       },
       "sweep": null,
       "watching": null,
@@ -64,12 +64,12 @@
       "open_time": 1786800600,
       "search_end": 1786806000,
       "swing_high": {
-        "time": 1786736700,
-        "price": 4435.6
+        "time": 1786737600,
+        "price": 30153
       },
       "swing_low": {
-        "time": 1786737600,
-        "price": 4426.9
+        "time": 1786739100,
+        "price": 30126.5
       },
       "sweep": null,
       "watching": null,
