@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-08-14T13:44:47.755893+00:00",
-  "generated_at_et": "2026-08-14 09:44 ET",
+  "generated_at": "2026-08-14T13:46:02.691667+00:00",
+  "generated_at_et": "2026-08-14 09:46 ET",
   "symbol": "CME_MINI:MNQ1!",
-  "price": 30258.5,
+  "price": 30266,
   "quote": {
     "success": true,
     "symbol": "CME_MINI:MNQ1!",
-    "time": 1786714800,
-    "open": 30221,
-    "high": 30261,
-    "low": 30193,
-    "close": 30258.5,
-    "last": 30258.5,
-    "volume": 58053,
+    "time": 1786715100,
+    "open": 30260.5,
+    "high": 30275.5,
+    "low": 30254.5,
+    "close": 30266,
+    "last": 30266,
+    "volume": 12705,
     "description": "Micro E-mini Nasdaq-100 Index Futures",
     "exchange": "CME",
     "type": "futures"
@@ -252,11 +252,23 @@
         "model1": {
           "model": "1",
           "direction": "up",
-          "fvgs": [],
-          "mss": null,
-          "confirmed": false,
-          "signal_time": null,
-          "signal_price": null
+          "fvgs": [
+            {
+              "top": 30254.5,
+              "bottom": 30222.75,
+              "time": 1786714800,
+              "confirmed_at": 1786715100
+            }
+          ],
+          "mss": {
+            "pivot_time": 1786714500,
+            "pivot_price": 30170,
+            "confirmed_at": 1786715100,
+            "confirmed_price": 30266
+          },
+          "confirmed": true,
+          "signal_time": 1786715100,
+          "signal_price": 30266
         },
         "model2": {
           "model": "2",
@@ -272,7 +284,7 @@
           "inversion_boundary": 30235.25,
           "confirmed": true,
           "signal_time": 1786714800,
-          "signal_price": 30258.5
+          "signal_price": 30260.5
         }
       },
       "signal": {
@@ -289,18 +301,18 @@
         "inversion_boundary": 30235.25,
         "confirmed": true,
         "signal_time": 1786714800,
-        "signal_price": 30258.5
+        "signal_price": 30260.5
       },
       "trade": {
         "model": "2",
         "direction": "long",
-        "entry": 30258.5,
+        "entry": 30260.5,
         "entry_type": "market_close",
         "entry_signal_time": 1786714800,
         "stop": 30200.75,
-        "breakeven_trigger": 30316.25,
-        "target": 30374.0,
-        "risk_points": 57.75,
+        "breakeven_trigger": 30320.25,
+        "target": 30380.0,
+        "risk_points": 59.75,
         "status": "stopped_out",
         "be_moved": false,
         "exit_price": 30200.75,
