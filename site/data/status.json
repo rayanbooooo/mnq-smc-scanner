@@ -1,19 +1,19 @@
 {
-  "generated_at": "2026-08-15T00:13:21.316195+00:00",
-  "generated_at_et": "2026-08-14 20:13 ET",
-  "symbol": "CME_MINI:NQ1!",
-  "price": 30154,
+  "generated_at": "2026-08-15T00:14:37.220654+00:00",
+  "generated_at_et": "2026-08-14 20:14 ET",
+  "symbol": "CME_MINI:MNQ1!",
+  "price": 30154.75,
   "quote": {
     "success": true,
-    "symbol": "CME_MINI:NQ1!",
+    "symbol": "CME_MINI:MNQ1!",
     "time": 1786740900,
-    "open": 30145,
+    "open": 30144.75,
     "high": 30154.75,
-    "low": 30143.5,
-    "close": 30154,
-    "last": 30154,
-    "volume": 477,
-    "description": "E-mini Nasdaq-100 Futures",
+    "low": 30143.75,
+    "close": 30154.75,
+    "last": 30154.75,
+    "volume": 1352,
+    "description": "Micro E-mini Nasdaq-100 Index Futures",
     "exchange": "CME",
     "type": "futures"
   },
@@ -30,12 +30,12 @@
       "open_time": 1786752000,
       "search_end": 1786766400,
       "swing_high": {
-        "time": 1786739400,
-        "price": 30145.75
+        "time": 1786737600,
+        "price": 30153
       },
       "swing_low": {
-        "time": 1786738800,
-        "price": 30127.25
+        "time": 1786739100,
+        "price": 30126.5
       },
       "sweep": null,
       "watching": null,
@@ -47,12 +47,12 @@
       "open_time": 1786755600,
       "search_end": 1786766400,
       "swing_high": {
-        "time": 1786739400,
-        "price": 30145.75
+        "time": 1786737600,
+        "price": 30153
       },
       "swing_low": {
-        "time": 1786738800,
-        "price": 30127.25
+        "time": 1786739100,
+        "price": 30126.5
       },
       "sweep": null,
       "watching": null,
@@ -64,12 +64,12 @@
       "open_time": 1786800600,
       "search_end": 1786806000,
       "swing_high": {
-        "time": 1786739400,
-        "price": 30145.75
+        "time": 1786737600,
+        "price": 30153
       },
       "swing_low": {
-        "time": 1786738800,
-        "price": 30127.25
+        "time": 1786739100,
+        "price": 30126.5
       },
       "sweep": null,
       "watching": null,
