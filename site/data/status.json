@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-15T21:58:46.862830+00:00",
-  "generated_at_et": "2026-08-15 17:58 ET",
+  "generated_at": "2026-08-15T22:00:01.435867+00:00",
+  "generated_at_et": "2026-08-15 18:00 ET",
   "symbol": "CME_MINI:MNQ1!",
   "price": 30154.75,
   "quote": {
@@ -17,18 +17,18 @@
     "exchange": "CME",
     "type": "futures"
   },
-  "trading_day": "2026-08-15",
+  "trading_day": "2026-08-16",
   "windows": {
-    "trading_day": "2026-08-15",
-    "8pm": 1786752000,
-    "9pm": 1786755600,
-    "midnight": 1786766400,
-    "930am": 1786800600
+    "trading_day": "2026-08-16",
+    "8pm": 1786838400,
+    "9pm": 1786842000,
+    "midnight": 1786852800,
+    "930am": 1786887000
   },
   "sessions": {
     "8pm": {
-      "open_time": 1786752000,
-      "search_end": 1786766400,
+      "open_time": 1786838400,
+      "search_end": 1786852800,
       "swing_high": {
         "time": 1786737600,
         "price": 30153
@@ -41,11 +41,11 @@
       "watching": null,
       "signal": null,
       "trade": null,
-      "status": "expired_no_sweep"
+      "status": "waiting_for_open"
     },
     "9pm": {
-      "open_time": 1786755600,
-      "search_end": 1786766400,
+      "open_time": 1786842000,
+      "search_end": 1786852800,
       "swing_high": {
         "time": 1786737600,
         "price": 30153
@@ -58,11 +58,11 @@
       "watching": null,
       "signal": null,
       "trade": null,
-      "status": "expired_no_sweep"
+      "status": "waiting_for_open"
     },
     "930am": {
-      "open_time": 1786800600,
-      "search_end": 1786806000,
+      "open_time": 1786887000,
+      "search_end": 1786892400,
       "swing_high": {
         "time": 1786737600,
         "price": 30153
@@ -75,7 +75,7 @@
       "watching": null,
       "signal": null,
       "trade": null,
-      "status": "expired_no_sweep"
+      "status": "waiting_for_open"
     }
   },
   "verdict": {
