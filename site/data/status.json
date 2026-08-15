@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-15T14:14:59.727057+00:00",
-  "generated_at_et": "2026-08-15 10:14 ET",
+  "generated_at": "2026-08-15T15:44:57.509108+00:00",
+  "generated_at_et": "2026-08-15 11:44 ET",
   "symbol": "CME_MINI:MNQ1!",
   "price": 30154.75,
   "quote": {
@@ -75,13 +75,13 @@
       "watching": null,
       "signal": null,
       "trade": null,
-      "status": "waiting_for_sweep"
+      "status": "expired_no_sweep"
     }
   },
   "verdict": {
-    "headline": "WATCHING",
-    "detail": "9:30 AM Open pre-session range",
-    "tone": "watching"
+    "headline": "NO ACTIVE SETUP",
+    "detail": "No session currently in play",
+    "tone": "none"
   },
   "news": []
 }
