@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-15T03:21:42.497886+00:00",
-  "generated_at_et": "2026-08-14 23:21 ET",
+  "generated_at": "2026-08-15T06:31:48.484103+00:00",
+  "generated_at_et": "2026-08-15 02:31 ET",
   "symbol": "CME_MINI:MNQ1!",
   "price": 30154.75,
   "quote": {
@@ -12,10 +12,7 @@
     "low": 30143.75,
     "close": 30154.75,
     "last": 30154.75,
-    "volume": 1352,
-    "description": "Micro E-mini Nasdaq-100 Index Futures",
-    "exchange": "CME",
-    "type": "futures"
+    "volume": 1352
   },
   "trading_day": "2026-08-15",
   "windows": {
@@ -41,7 +38,7 @@
       "watching": null,
       "signal": null,
       "trade": null,
-      "status": "waiting_for_sweep"
+      "status": "expired_no_sweep"
     },
     "9pm": {
       "open_time": 1786755600,
@@ -58,7 +55,7 @@
       "watching": null,
       "signal": null,
       "trade": null,
-      "status": "waiting_for_sweep"
+      "status": "expired_no_sweep"
     },
     "930am": {
       "open_time": 1786800600,
@@ -79,9 +76,9 @@
     }
   },
   "verdict": {
-    "headline": "WATCHING",
-    "detail": "8:00 PM Open pre-session range",
-    "tone": "watching"
+    "headline": "NO ACTIVE SETUP",
+    "detail": "No session currently in play",
+    "tone": "none"
   },
   "news": []
 }
