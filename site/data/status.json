@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-15T00:45:51.204468+00:00",
-  "generated_at_et": "2026-08-14 20:45 ET",
+  "generated_at": "2026-08-15T03:21:42.497886+00:00",
+  "generated_at_et": "2026-08-14 23:21 ET",
   "symbol": "CME_MINI:MNQ1!",
   "price": 30154.75,
   "quote": {
@@ -58,7 +58,7 @@
       "watching": null,
       "signal": null,
       "trade": null,
-      "status": "waiting_for_open"
+      "status": "waiting_for_sweep"
     },
     "930am": {
       "open_time": 1786800600,
