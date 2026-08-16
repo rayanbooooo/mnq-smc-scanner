@@ -1,20 +1,20 @@
 {
-  "generated_at": "2026-08-16T23:19:53.526120+00:00",
-  "generated_at_et": "2026-08-16 19:19 ET",
-  "symbol": "CME_MINI:MNQ1!",
-  "price": 30194.75,
+  "generated_at": "2026-08-16T23:21:08.254986+00:00",
+  "generated_at_et": "2026-08-16 19:21 ET",
+  "symbol": "COMEX_MINI:MGC1!",
+  "price": 4435.8,
   "quote": {
     "success": true,
-    "symbol": "CME_MINI:MNQ1!",
-    "time": 1786922100,
-    "open": 30197,
-    "high": 30198,
-    "low": 30194,
-    "close": 30194.75,
-    "last": 30194.75,
-    "volume": 1441,
-    "description": "Micro E-mini Nasdaq-100 Index Futures",
-    "exchange": "CME",
+    "symbol": "COMEX_MINI:MGC1!",
+    "time": 1786922400,
+    "open": 4435.6,
+    "high": 4435.9,
+    "low": 4434.5,
+    "close": 4435.8,
+    "last": 4435.8,
+    "volume": 215,
+    "description": "Micro Gold Futures",
+    "exchange": "COMEX",
     "type": "futures"
   },
   "trading_day": "2026-08-17",
@@ -30,12 +30,12 @@
       "open_time": 1786924800,
       "search_end": 1786939200,
       "swing_high": {
-        "time": 1786920600,
-        "price": 30212
+        "time": 1786920900,
+        "price": 4442.7
       },
       "swing_low": {
-        "time": 1786920300,
-        "price": 30187.75
+        "time": 1786919100,
+        "price": 4429.1
       },
       "sweep": null,
       "watching": null,
@@ -47,12 +47,12 @@
       "open_time": 1786928400,
       "search_end": 1786939200,
       "swing_high": {
-        "time": 1786920600,
-        "price": 30212
+        "time": 1786920900,
+        "price": 4442.7
       },
       "swing_low": {
-        "time": 1786920300,
-        "price": 30187.75
+        "time": 1786919100,
+        "price": 4429.1
       },
       "sweep": null,
       "watching": null,
@@ -64,12 +64,12 @@
       "open_time": 1786973400,
       "search_end": 1786978800,
       "swing_high": {
-        "time": 1786920600,
-        "price": 30212
+        "time": 1786920900,
+        "price": 4442.7
       },
       "swing_low": {
-        "time": 1786920300,
-        "price": 30187.75
+        "time": 1786919100,
+        "price": 4429.1
       },
       "sweep": null,
       "watching": null,
@@ -83,5 +83,7 @@
     "detail": "No session currently in play",
     "tone": "none"
   },
-  "news": []
+  "news": [
+    "Rs 98 crore gold bars, coins found while digging sewer, workers says 'our first reaction was actually disbelief'"
+  ]
 }
