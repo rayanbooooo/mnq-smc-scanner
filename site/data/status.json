@@ -1,20 +1,20 @@
 {
-  "generated_at": "2026-08-16T23:23:37.630389+00:00",
-  "generated_at_et": "2026-08-16 19:23 ET",
-  "symbol": "CME_MINI:MNQ1!",
-  "price": 30201,
+  "generated_at": "2026-08-16T23:24:51.345352+00:00",
+  "generated_at_et": "2026-08-16 19:24 ET",
+  "symbol": "COMEX_MINI:MGC1!",
+  "price": 4431.8,
   "quote": {
     "success": true,
-    "symbol": "CME_MINI:MNQ1!",
+    "symbol": "COMEX_MINI:MGC1!",
     "time": 1786922400,
-    "open": 30194.75,
-    "high": 30204.5,
-    "low": 30191.5,
-    "close": 30201,
-    "last": 30201,
-    "volume": 2379,
-    "description": "Micro E-mini Nasdaq-100 Index Futures",
-    "exchange": "CME",
+    "open": 4435.6,
+    "high": 4436.5,
+    "low": 4430.7,
+    "close": 4431.8,
+    "last": 4431.8,
+    "volume": 935,
+    "description": "Micro Gold Futures",
+    "exchange": "COMEX",
     "type": "futures"
   },
   "trading_day": "2026-08-17",
@@ -30,12 +30,12 @@
       "open_time": 1786924800,
       "search_end": 1786939200,
       "swing_high": {
-        "time": 1786920600,
-        "price": 30212
+        "time": 1786920900,
+        "price": 4442.7
       },
       "swing_low": {
-        "time": 1786920300,
-        "price": 30187.75
+        "time": 1786919100,
+        "price": 4429.1
       },
       "sweep": null,
       "watching": null,
@@ -47,12 +47,12 @@
       "open_time": 1786928400,
       "search_end": 1786939200,
       "swing_high": {
-        "time": 1786920600,
-        "price": 30212
+        "time": 1786920900,
+        "price": 4442.7
       },
       "swing_low": {
-        "time": 1786920300,
-        "price": 30187.75
+        "time": 1786919100,
+        "price": 4429.1
       },
       "sweep": null,
       "watching": null,
@@ -64,12 +64,12 @@
       "open_time": 1786973400,
       "search_end": 1786978800,
       "swing_high": {
-        "time": 1786920600,
-        "price": 30212
+        "time": 1786920900,
+        "price": 4442.7
       },
       "swing_low": {
-        "time": 1786920300,
-        "price": 30187.75
+        "time": 1786919100,
+        "price": 4429.1
       },
       "sweep": null,
       "watching": null,
@@ -84,6 +84,6 @@
     "tone": "none"
   },
   "news": [
-    "Bitcoin to $10,000 a 'Faustian Bargain': Bloomberg's Top Strategist Updates BTC Price Outlook"
+    "Rs 98 crore gold bars, coins found while digging sewer, workers says 'our first reaction was actually disbelief'"
   ]
 }
