@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-08-17T01:04:25.969438+00:00",
-  "generated_at_et": "2026-08-16 21:04 ET",
+  "generated_at": "2026-08-17T01:05:39.773824+00:00",
+  "generated_at_et": "2026-08-16 21:05 ET",
   "symbol": "CME_MINI:MNQ1!",
-  "price": 30219.25,
+  "price": 30226,
   "quote": {
     "success": true,
     "symbol": "CME_MINI:MNQ1!",
-    "time": 1786928400,
-    "open": 30201.25,
-    "high": 30225.5,
-    "low": 30200,
-    "close": 30219.25,
-    "last": 30219.25,
-    "volume": 8082,
+    "time": 1786928700,
+    "open": 30227.25,
+    "high": 30237.25,
+    "low": 30224.25,
+    "close": 30226,
+    "last": 30226,
+    "volume": 1933,
     "description": "Micro E-mini Nasdaq-100 Index Futures",
     "exchange": "CME",
     "type": "futures"
@@ -106,10 +106,10 @@
         "breakeven_trigger": 30190.25,
         "target": 30169.25,
         "risk_points": 21.0,
-        "status": "open",
+        "status": "stopped_out",
         "be_moved": false,
-        "exit_price": null,
-        "exit_time": null
+        "exit_price": 30232.25,
+        "exit_time": 1786928700
       },
       "status": "trade"
     },
@@ -124,11 +124,42 @@
         "time": 1786926600,
         "price": 30185.25
       },
-      "sweep": null,
-      "watching": null,
+      "sweep": {
+        "direction": "up",
+        "time": 1786928700,
+        "extreme": 30237.25,
+        "swept_level": 30228
+      },
+      "watching": {
+        "model1": {
+          "model": "1",
+          "direction": "down",
+          "fvgs": [],
+          "mss": null,
+          "confirmed": false,
+          "signal_time": null,
+          "signal_price": null
+        },
+        "model2": {
+          "model": "2",
+          "direction": "down",
+          "fvgs": [
+            {
+              "top": 30224.25,
+              "bottom": 30203,
+              "time": 1786928400,
+              "confirmed_at": 1786928700
+            }
+          ],
+          "inversion_boundary": 30203,
+          "confirmed": false,
+          "signal_time": null,
+          "signal_price": null
+        }
+      },
       "signal": null,
       "trade": null,
-      "status": "waiting_for_sweep"
+      "status": "watching_for_reversal"
     },
     "930am": {
       "open_time": 1786973400,
@@ -149,9 +180,9 @@
     }
   },
   "verdict": {
-    "headline": "SHORT OPEN",
-    "detail": "8:00 PM Open \u00b7 Model 1",
-    "tone": "short"
+    "headline": "WATCHING",
+    "detail": "9:00 PM Open swept, awaiting reversal",
+    "tone": "watching"
   },
   "news": [
     "Bitcoin to $10,000 a 'Faustian Bargain': Bloomberg's Top Strategist Updates BTC Price Outlook"
