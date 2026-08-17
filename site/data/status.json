@@ -1,20 +1,20 @@
 {
-  "generated_at": "2026-08-17T01:43:04.975632+00:00",
-  "generated_at_et": "2026-08-16 21:43 ET",
-  "symbol": "COMEX_MINI:MGC1!",
-  "price": 4457.1,
+  "generated_at": "2026-08-17T01:44:18.717755+00:00",
+  "generated_at_et": "2026-08-16 21:44 ET",
+  "symbol": "CME_MINI:MNQ1!",
+  "price": 30194.5,
   "quote": {
     "success": true,
-    "symbol": "COMEX_MINI:MGC1!",
+    "symbol": "CME_MINI:MNQ1!",
     "time": 1786930800,
-    "open": 4457.3,
-    "high": 4458,
-    "low": 4454,
-    "close": 4457.1,
-    "last": 4457.1,
-    "volume": 1019,
-    "description": "Micro Gold Futures",
-    "exchange": "COMEX",
+    "open": 30211.75,
+    "high": 30214,
+    "low": 30191,
+    "close": 30194.5,
+    "last": 30194.5,
+    "volume": 5212,
+    "description": "Micro E-mini Nasdaq-100 Index Futures",
+    "exchange": "CME",
     "type": "futures"
   },
   "trading_day": "2026-08-17",
@@ -30,18 +30,18 @@
       "open_time": 1786924800,
       "search_end": 1786939200,
       "swing_high": {
-        "time": 1786923900,
-        "price": 4429.1
+        "time": 1786920600,
+        "price": 30212
       },
       "swing_low": {
         "time": 1786923300,
-        "price": 4422.3
+        "price": 30193
       },
       "sweep": {
         "direction": "up",
         "time": 1786924800,
-        "extreme": 4431.7,
-        "swept_level": 4429.1
+        "extreme": 30227.25,
+        "swept_level": 30212
       },
       "watching": {
         "model1": {
@@ -49,21 +49,21 @@
           "direction": "down",
           "fvgs": [
             {
-              "top": 4463,
-              "bottom": 4459.9,
-              "time": 1786930200,
-              "confirmed_at": 1786930500
+              "top": 30211.25,
+              "bottom": 30200.5,
+              "time": 1786925700,
+              "confirmed_at": 1786926000
             }
           ],
           "mss": {
-            "pivot_time": 1786928700,
-            "pivot_price": 4468.5,
-            "confirmed_at": 1786929300,
-            "confirmed_price": 4464.9
+            "pivot_time": 1786926300,
+            "pivot_price": 30204,
+            "confirmed_at": 1786926900,
+            "confirmed_price": 30186.5
           },
           "confirmed": true,
-          "signal_time": 1786929300,
-          "signal_price": 4464.9
+          "signal_time": 1786926900,
+          "signal_price": 30186.5
         },
         "model2": {
           "model": "2",
@@ -80,36 +80,36 @@
         "direction": "down",
         "fvgs": [
           {
-            "top": 4463,
-            "bottom": 4459.9,
-            "time": 1786930200,
-            "confirmed_at": 1786930500
+            "top": 30211.25,
+            "bottom": 30200.5,
+            "time": 1786925700,
+            "confirmed_at": 1786926000
           }
         ],
         "mss": {
-          "pivot_time": 1786928700,
-          "pivot_price": 4468.5,
-          "confirmed_at": 1786929300,
-          "confirmed_price": 4464.9
+          "pivot_time": 1786926300,
+          "pivot_price": 30204,
+          "confirmed_at": 1786926900,
+          "confirmed_price": 30186.5
         },
         "confirmed": true,
-        "signal_time": 1786929300,
-        "signal_price": 4464.9
+        "signal_time": 1786926900,
+        "signal_price": 30186.5
       },
       "trade": {
         "model": "1",
         "direction": "short",
-        "entry": 4464.9,
-        "entry_type": "market_close",
-        "entry_signal_time": 1786929300,
-        "stop": 4436.7,
-        "breakeven_trigger": 4436.7,
-        "target": 4408.5,
-        "risk_points": 28.199999999999818,
+        "entry": 30211.25,
+        "entry_type": "limit_fvg",
+        "entry_signal_time": 1786926900,
+        "stop": 30232.25,
+        "breakeven_trigger": 30190.25,
+        "target": 30169.25,
+        "risk_points": 21.0,
         "status": "stopped_out",
         "be_moved": false,
-        "exit_price": 4436.7,
-        "exit_time": 1786929300
+        "exit_price": 30232.25,
+        "exit_time": 1786928700
       },
       "status": "trade"
     },
@@ -117,18 +117,18 @@
       "open_time": 1786928400,
       "search_end": 1786939200,
       "swing_high": {
-        "time": 1786923900,
-        "price": 4429.1
+        "time": 1786924200,
+        "price": 30228
       },
       "swing_low": {
-        "time": 1786927200,
-        "price": 4443.1
+        "time": 1786926600,
+        "price": 30185.25
       },
       "sweep": {
         "direction": "up",
-        "time": 1786928400,
-        "extreme": 4465.8,
-        "swept_level": 4429.1
+        "time": 1786928700,
+        "extreme": 30237.25,
+        "swept_level": 30228
       },
       "watching": {
         "model1": {
@@ -136,37 +136,37 @@
           "direction": "down",
           "fvgs": [
             {
-              "top": 4463,
-              "bottom": 4459.9,
-              "time": 1786930200,
-              "confirmed_at": 1786930500
+              "top": 30223.75,
+              "bottom": 30221.75,
+              "time": 1786929000,
+              "confirmed_at": 1786929300
             }
           ],
           "mss": {
-            "pivot_time": 1786928700,
-            "pivot_price": 4468.5,
-            "confirmed_at": 1786929300,
-            "confirmed_price": 4464.9
+            "pivot_time": 1786929600,
+            "pivot_price": 30245,
+            "confirmed_at": 1786930200,
+            "confirmed_price": 30204.25
           },
           "confirmed": true,
-          "signal_time": 1786929300,
-          "signal_price": 4464.9
+          "signal_time": 1786930200,
+          "signal_price": 30204.25
         },
         "model2": {
           "model": "2",
           "direction": "down",
           "fvgs": [
             {
-              "top": 4461.6,
-              "bottom": 4459.4,
+              "top": 30223.75,
+              "bottom": 30203,
               "time": 1786928400,
               "confirmed_at": 1786928700
             }
           ],
-          "inversion_boundary": 4459.4,
+          "inversion_boundary": 30203,
           "confirmed": true,
-          "signal_time": 1786930200,
-          "signal_price": 4458.7
+          "signal_time": 1786930800,
+          "signal_price": 30194.5
         }
       },
       "signal": {
@@ -174,36 +174,36 @@
         "direction": "down",
         "fvgs": [
           {
-            "top": 4463,
-            "bottom": 4459.9,
-            "time": 1786930200,
-            "confirmed_at": 1786930500
+            "top": 30223.75,
+            "bottom": 30221.75,
+            "time": 1786929000,
+            "confirmed_at": 1786929300
           }
         ],
         "mss": {
-          "pivot_time": 1786928700,
-          "pivot_price": 4468.5,
-          "confirmed_at": 1786929300,
-          "confirmed_price": 4464.9
+          "pivot_time": 1786929600,
+          "pivot_price": 30245,
+          "confirmed_at": 1786930200,
+          "confirmed_price": 30204.25
         },
         "confirmed": true,
-        "signal_time": 1786929300,
-        "signal_price": 4464.9
+        "signal_time": 1786930200,
+        "signal_price": 30204.25
       },
       "trade": {
         "model": "1",
         "direction": "short",
-        "entry": 4464.9,
-        "entry_type": "market_close",
-        "entry_signal_time": 1786929300,
-        "stop": 4470.8,
-        "breakeven_trigger": 4458.999999999999,
-        "target": 4453.0999999999985,
-        "risk_points": 5.900000000000546,
-        "status": "stopped_out",
-        "be_moved": false,
-        "exit_price": 4470.8,
-        "exit_time": 1786929600
+        "entry": 30223.75,
+        "entry_type": "limit_fvg",
+        "entry_signal_time": 1786930200,
+        "stop": 30242.25,
+        "breakeven_trigger": 30205.25,
+        "target": 30186.75,
+        "risk_points": 18.5,
+        "status": "breakeven_exit",
+        "be_moved": true,
+        "exit_price": 30223.75,
+        "exit_time": 1786930200
       },
       "status": "trade"
     },
@@ -212,11 +212,11 @@
       "search_end": 1786978800,
       "swing_high": {
         "time": 1786929600,
-        "price": 4473.2
+        "price": 30245
       },
       "swing_low": {
-        "time": 1786927200,
-        "price": 4443.1
+        "time": 1786929300,
+        "price": 30204
       },
       "sweep": null,
       "watching": null,
@@ -231,6 +231,6 @@
     "tone": "none"
   },
   "news": [
-    "Commodities intraday targets/key levels"
+    "Bitcoin to $10,000 a 'Faustian Bargain': Bloomberg's Top Strategist Updates BTC Price Outlook"
   ]
 }
