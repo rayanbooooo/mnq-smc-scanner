@@ -1,142 +1,81 @@
 {
-  "generated_at": "2026-08-17T21:45:45.608677+00:00",
-  "generated_at_et": "2026-08-17 17:45 ET",
+  "generated_at": "2026-08-17T22:17:46.162042+00:00",
+  "generated_at_et": "2026-08-17 18:17 ET",
   "symbol": "CME_MINI:MNQ1!",
-  "price": 30080.25,
+  "price": 30085.75,
   "quote": {
     "success": true,
     "symbol": "CME_MINI:MNQ1!",
-    "time": 1787000100,
-    "open": 30073.25,
-    "high": 30080.25,
-    "low": 30067.75,
-    "close": 30080.25,
-    "last": 30080.25,
-    "volume": 1823,
+    "time": 1787004000,
+    "open": 30078.75,
+    "high": 30091.5,
+    "low": 30077.5,
+    "close": 30085.75,
+    "last": 30085.75,
+    "volume": 2309,
     "description": "Micro E-mini Nasdaq-100 Index Futures",
     "exchange": "CME",
     "type": "futures"
   },
-  "trading_day": "2026-08-17",
+  "trading_day": "2026-08-18",
   "windows": {
-    "trading_day": "2026-08-17",
-    "8pm": 1786924800,
-    "9pm": 1786928400,
-    "midnight": 1786939200,
-    "930am": 1786973400
+    "trading_day": "2026-08-18",
+    "8pm": 1787011200,
+    "9pm": 1787014800,
+    "midnight": 1787025600,
+    "930am": 1787059800
   },
   "sessions": {
     "8pm": {
-      "open_time": 1786924800,
-      "search_end": 1786939200,
-      "swing_high": null,
-      "swing_low": null,
+      "open_time": 1787011200,
+      "search_end": 1787025600,
+      "swing_high": {
+        "time": 1786996200,
+        "price": 30123.5
+      },
+      "swing_low": {
+        "time": 1786999500,
+        "price": 30053.25
+      },
       "sweep": null,
       "watching": null,
       "signal": null,
       "trade": null,
-      "status": "expired_no_sweep"
+      "status": "waiting_for_open"
     },
     "9pm": {
-      "open_time": 1786928400,
-      "search_end": 1786939200,
-      "swing_high": null,
+      "open_time": 1787014800,
+      "search_end": 1787025600,
+      "swing_high": {
+        "time": 1786996200,
+        "price": 30123.5
+      },
       "swing_low": {
-        "time": 1786926600,
-        "price": 30185.25
+        "time": 1786999500,
+        "price": 30053.25
       },
       "sweep": null,
       "watching": null,
       "signal": null,
       "trade": null,
-      "status": "expired_no_sweep"
+      "status": "waiting_for_open"
     },
     "930am": {
-      "open_time": 1786973400,
-      "search_end": 1786978800,
+      "open_time": 1787059800,
+      "search_end": 1787065200,
       "swing_high": {
-        "time": 1786972200,
-        "price": 30227.5
+        "time": 1786996200,
+        "price": 30123.5
       },
       "swing_low": {
-        "time": 1786970700,
-        "price": 30180
+        "time": 1786999500,
+        "price": 30053.25
       },
-      "sweep": {
-        "direction": "up",
-        "time": 1786973400,
-        "extreme": 30265.75,
-        "swept_level": 30227.5
-      },
-      "watching": {
-        "model1": {
-          "model": "1",
-          "direction": "down",
-          "fvgs": [
-            {
-              "top": 30194.75,
-              "bottom": 30185,
-              "time": 1786976100,
-              "confirmed_at": 1786976400
-            }
-          ],
-          "mss": {
-            "pivot_time": 1786974600,
-            "pivot_price": 30254.75,
-            "confirmed_at": 1786975200,
-            "confirmed_price": 30207.25
-          },
-          "confirmed": true,
-          "signal_time": 1786975200,
-          "signal_price": 30207.25
-        },
-        "model2": {
-          "model": "2",
-          "direction": "down",
-          "fvgs": [],
-          "inversion_boundary": null,
-          "confirmed": false,
-          "signal_time": null,
-          "signal_price": null
-        }
-      },
-      "signal": {
-        "model": "1",
-        "direction": "down",
-        "fvgs": [
-          {
-            "top": 30194.75,
-            "bottom": 30185,
-            "time": 1786976100,
-            "confirmed_at": 1786976400
-          }
-        ],
-        "mss": {
-          "pivot_time": 1786974600,
-          "pivot_price": 30254.75,
-          "confirmed_at": 1786975200,
-          "confirmed_price": 30207.25
-        },
-        "confirmed": true,
-        "signal_time": 1786975200,
-        "signal_price": 30207.25
-      },
-      "trade": {
-        "model": "1",
-        "direction": "short",
-        "entry": 30194.75,
-        "entry_type": "limit_fvg",
-        "entry_signal_time": 1786975200,
-        "stop": 30270.75,
-        "breakeven_trigger": 30118.75,
-        "target": 30042.75,
-        "risk_points": 76.0,
-        "status": "stopped_out",
-        "be_moved": false,
-        "exit_price": 30270.75,
-        "exit_time": 1786978800
-      },
-      "status": "trade"
+      "sweep": null,
+      "watching": null,
+      "signal": null,
+      "trade": null,
+      "status": "waiting_for_open"
     }
   },
   "verdict": {
