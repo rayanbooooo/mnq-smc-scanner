@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-08-17T19:30:58.041239+00:00",
-  "generated_at_et": "2026-08-17 15:30 ET",
+  "generated_at": "2026-08-17T19:43:42.372929+00:00",
+  "generated_at_et": "2026-08-17 15:43 ET",
   "symbol": "CME_MINI:MNQ1!",
-  "price": 30086.5,
+  "price": 30100.5,
   "quote": {
     "success": true,
     "symbol": "CME_MINI:MNQ1!",
-    "time": 1786994100,
-    "open": 30084.25,
-    "high": 30087,
-    "low": 30083,
-    "close": 30086.5,
-    "last": 30086.5,
-    "volume": 1098,
+    "time": 1786995000,
+    "open": 30093.5,
+    "high": 30101.5,
+    "low": 30088.25,
+    "close": 30100.5,
+    "last": 30100.5,
+    "volume": 5640,
     "description": "Micro E-mini Nasdaq-100 Index Futures",
     "exchange": "CME",
     "type": "futures"
@@ -29,24 +29,48 @@
     "8pm": {
       "open_time": 1786924800,
       "search_end": 1786939200,
-      "swing_high": {
-        "time": 1786920600,
-        "price": 30212
-      },
+      "swing_high": null,
       "swing_low": {
         "time": 1786923300,
         "price": 30193
       },
       "sweep": {
-        "direction": "up",
-        "time": 1786924800,
-        "extreme": 30227.25,
-        "swept_level": 30212
+        "direction": "down",
+        "time": 1786925700,
+        "extreme": 30189.5,
+        "swept_level": 30193
       },
       "watching": {
         "model1": {
           "model": "1",
-          "direction": "down",
+          "direction": "up",
+          "fvgs": [
+            {
+              "top": 30223.75,
+              "bottom": 30203,
+              "time": 1786928400,
+              "confirmed_at": 1786928700
+            },
+            {
+              "top": 30211,
+              "bottom": 30205.5,
+              "time": 1786933200,
+              "confirmed_at": 1786933500
+            }
+          ],
+          "mss": {
+            "pivot_time": 1786926600,
+            "pivot_price": 30185.25,
+            "confirmed_at": 1786927200,
+            "confirmed_price": 30190.25
+          },
+          "confirmed": true,
+          "signal_time": 1786927200,
+          "signal_price": 30190.25
+        },
+        "model2": {
+          "model": "2",
+          "direction": "up",
           "fvgs": [
             {
               "top": 30211.25,
@@ -55,61 +79,53 @@
               "confirmed_at": 1786926000
             }
           ],
-          "mss": {
-            "pivot_time": 1786926300,
-            "pivot_price": 30204,
-            "confirmed_at": 1786926900,
-            "confirmed_price": 30186.5
-          },
+          "inversion_boundary": 30211.25,
           "confirmed": true,
-          "signal_time": 1786926900,
-          "signal_price": 30186.5
-        },
-        "model2": {
-          "model": "2",
-          "direction": "down",
-          "fvgs": [],
-          "inversion_boundary": null,
-          "confirmed": false,
-          "signal_time": null,
-          "signal_price": null
+          "signal_time": 1786928400,
+          "signal_price": 30227.5
         }
       },
       "signal": {
         "model": "1",
-        "direction": "down",
+        "direction": "up",
         "fvgs": [
           {
-            "top": 30211.25,
-            "bottom": 30200.5,
-            "time": 1786925700,
-            "confirmed_at": 1786926000
+            "top": 30223.75,
+            "bottom": 30203,
+            "time": 1786928400,
+            "confirmed_at": 1786928700
+          },
+          {
+            "top": 30211,
+            "bottom": 30205.5,
+            "time": 1786933200,
+            "confirmed_at": 1786933500
           }
         ],
         "mss": {
-          "pivot_time": 1786926300,
-          "pivot_price": 30204,
-          "confirmed_at": 1786926900,
-          "confirmed_price": 30186.5
+          "pivot_time": 1786926600,
+          "pivot_price": 30185.25,
+          "confirmed_at": 1786927200,
+          "confirmed_price": 30190.25
         },
         "confirmed": true,
-        "signal_time": 1786926900,
-        "signal_price": 30186.5
+        "signal_time": 1786927200,
+        "signal_price": 30190.25
       },
       "trade": {
         "model": "1",
-        "direction": "short",
-        "entry": 30211.25,
-        "entry_type": "limit_fvg",
-        "entry_signal_time": 1786926900,
-        "stop": 30232.25,
-        "breakeven_trigger": 30190.25,
-        "target": 30169.25,
-        "risk_points": 21.0,
-        "status": "stopped_out",
-        "be_moved": false,
-        "exit_price": 30232.25,
-        "exit_time": 1786928700
+        "direction": "long",
+        "entry": 30190.25,
+        "entry_type": "market_close",
+        "entry_signal_time": 1786927200,
+        "stop": 30184.5,
+        "breakeven_trigger": 30196.0,
+        "target": 30201.75,
+        "risk_points": 5.75,
+        "status": "breakeven_exit",
+        "be_moved": true,
+        "exit_price": 30190.25,
+        "exit_time": 1786927200
       },
       "status": "trade"
     },
