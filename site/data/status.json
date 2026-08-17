@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-08-17T00:39:32.401456+00:00",
-  "generated_at_et": "2026-08-16 20:39 ET",
+  "generated_at": "2026-08-17T00:40:47.763768+00:00",
+  "generated_at_et": "2026-08-16 20:40 ET",
   "symbol": "CME_MINI:MNQ1!",
-  "price": 30190,
+  "price": 30190.25,
   "quote": {
     "success": true,
     "symbol": "CME_MINI:MNQ1!",
-    "time": 1786926900,
-    "open": 30190.5,
-    "high": 30194,
-    "low": 30185.5,
-    "close": 30190,
-    "last": 30190,
-    "volume": 2446,
+    "time": 1786927200,
+    "open": 30186.5,
+    "high": 30190.75,
+    "low": 30186.5,
+    "close": 30190.25,
+    "last": 30190.25,
+    "volume": 258,
     "description": "Micro E-mini Nasdaq-100 Index Futures",
     "exchange": "CME",
     "type": "futures"
@@ -59,11 +59,11 @@
             "pivot_time": 1786926300,
             "pivot_price": 30204,
             "confirmed_at": 1786926900,
-            "confirmed_price": 30190.5
+            "confirmed_price": 30186.5
           },
           "confirmed": true,
           "signal_time": 1786926900,
-          "signal_price": 30190.5
+          "signal_price": 30186.5
         },
         "model2": {
           "model": "2",
@@ -90,23 +90,23 @@
           "pivot_time": 1786926300,
           "pivot_price": 30204,
           "confirmed_at": 1786926900,
-          "confirmed_price": 30190.5
+          "confirmed_price": 30186.5
         },
         "confirmed": true,
         "signal_time": 1786926900,
-        "signal_price": 30190.5
+        "signal_price": 30186.5
       },
       "trade": {
         "model": "1",
         "direction": "short",
-        "entry": 30190.5,
-        "entry_type": "market_close",
+        "entry": 30211.25,
+        "entry_type": "limit_fvg",
         "entry_signal_time": 1786926900,
         "stop": 30232.25,
-        "breakeven_trigger": 30148.75,
-        "target": 30107.0,
-        "risk_points": 41.75,
-        "status": "open",
+        "breakeven_trigger": 30190.25,
+        "target": 30169.25,
+        "risk_points": 21.0,
+        "status": "pending_entry",
         "be_moved": false,
         "exit_price": null,
         "exit_time": null
@@ -121,8 +121,8 @@
         "price": 30228
       },
       "swing_low": {
-        "time": 1786925700,
-        "price": 30189.5
+        "time": 1786926600,
+        "price": 30185.25
       },
       "sweep": null,
       "watching": null,
@@ -138,8 +138,8 @@
         "price": 30228
       },
       "swing_low": {
-        "time": 1786925700,
-        "price": 30189.5
+        "time": 1786926600,
+        "price": 30185.25
       },
       "sweep": null,
       "watching": null,
@@ -149,7 +149,7 @@
     }
   },
   "verdict": {
-    "headline": "SHORT OPEN",
+    "headline": "SHORT PENDING",
     "detail": "8:00 PM Open \u00b7 Model 1",
     "tone": "short"
   },
