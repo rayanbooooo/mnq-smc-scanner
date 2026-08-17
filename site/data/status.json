@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-08-17T00:59:28.346873+00:00",
-  "generated_at_et": "2026-08-16 20:59 ET",
+  "generated_at": "2026-08-17T01:00:43.121736+00:00",
+  "generated_at_et": "2026-08-16 21:00 ET",
   "symbol": "CME_MINI:MNQ1!",
-  "price": 30199.5,
+  "price": 30212,
   "quote": {
     "success": true,
     "symbol": "CME_MINI:MNQ1!",
-    "time": 1786928100,
-    "open": 30195.75,
-    "high": 30201.75,
-    "low": 30192,
-    "close": 30199.5,
-    "last": 30199.5,
-    "volume": 1479,
+    "time": 1786928400,
+    "open": 30201.25,
+    "high": 30215.25,
+    "low": 30200,
+    "close": 30212,
+    "last": 30212,
+    "volume": 2655,
     "description": "Micro E-mini Nasdaq-100 Index Futures",
     "exchange": "CME",
     "type": "futures"
@@ -106,7 +106,7 @@
         "breakeven_trigger": 30190.25,
         "target": 30169.25,
         "risk_points": 21.0,
-        "status": "pending_entry",
+        "status": "open",
         "be_moved": false,
         "exit_price": null,
         "exit_time": null
@@ -128,7 +128,7 @@
       "watching": null,
       "signal": null,
       "trade": null,
-      "status": "waiting_for_open"
+      "status": "waiting_for_sweep"
     },
     "930am": {
       "open_time": 1786973400,
@@ -149,7 +149,7 @@
     }
   },
   "verdict": {
-    "headline": "SHORT PENDING",
+    "headline": "SHORT OPEN",
     "detail": "8:00 PM Open \u00b7 Model 1",
     "tone": "short"
   },
