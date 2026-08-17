@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-08-17T12:28:40.994344+00:00",
-  "generated_at_et": "2026-08-17 08:28 ET",
+  "generated_at": "2026-08-17T12:29:55.694664+00:00",
+  "generated_at_et": "2026-08-17 08:29 ET",
   "symbol": "CME_MINI:MNQ1!",
-  "price": 30243.25,
+  "price": 30236,
   "quote": {
     "success": true,
     "symbol": "CME_MINI:MNQ1!",
@@ -10,9 +10,9 @@
     "open": 30272.25,
     "high": 30277.5,
     "low": 30221.25,
-    "close": 30243.25,
-    "last": 30243.25,
-    "volume": 10861,
+    "close": 30236,
+    "last": 30236,
+    "volume": 12313,
     "description": "Micro E-mini Nasdaq-100 Index Futures",
     "exchange": "CME",
     "type": "futures"
@@ -230,7 +230,5 @@
     "detail": "No session currently in play",
     "tone": "none"
   },
-  "news": [
-    "Bitcoin to $10,000 a 'Faustian Bargain': Bloomberg's Top Strategist Updates BTC Price Outlook"
-  ]
+  "news": []
 }
