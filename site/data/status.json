@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-08-18T23:29:48.217713+00:00",
-  "generated_at_et": "2026-08-18 19:29 ET",
+  "generated_at": "2026-08-18T23:31:03.305351+00:00",
+  "generated_at_et": "2026-08-18 19:31 ET",
   "symbol": "CME_MINI:MNQ1!",
-  "price": 29546.75,
+  "price": 29548,
   "quote": {
     "success": true,
     "symbol": "CME_MINI:MNQ1!",
-    "time": 1787095500,
-    "open": 29552.75,
-    "high": 29556.5,
-    "low": 29543,
-    "close": 29546.75,
-    "last": 29546.75,
-    "volume": 2721,
+    "time": 1787095800,
+    "open": 29546.25,
+    "high": 29549.5,
+    "low": 29545.5,
+    "close": 29548,
+    "last": 29548,
+    "volume": 417,
     "description": "Micro E-mini Nasdaq-100 Index Futures",
     "exchange": "CME",
     "type": "futures"
@@ -30,8 +30,8 @@
       "open_time": 1787097600,
       "search_end": 1787112000,
       "swing_high": {
-        "time": 1787094300,
-        "price": 29543.5
+        "time": 1787095200,
+        "price": 29568
       },
       "swing_low": {
         "time": 1787094000,
@@ -47,8 +47,8 @@
       "open_time": 1787101200,
       "search_end": 1787112000,
       "swing_high": {
-        "time": 1787094300,
-        "price": 29543.5
+        "time": 1787095200,
+        "price": 29568
       },
       "swing_low": {
         "time": 1787094000,
@@ -64,8 +64,8 @@
       "open_time": 1787146200,
       "search_end": 1787151600,
       "swing_high": {
-        "time": 1787094300,
-        "price": 29543.5
+        "time": 1787095200,
+        "price": 29568
       },
       "swing_low": {
         "time": 1787094000,
