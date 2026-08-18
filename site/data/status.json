@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-08-18T13:48:37.388849+00:00",
-  "generated_at_et": "2026-08-18 09:48 ET",
+  "generated_at": "2026-08-18T13:50:53.573147+00:00",
+  "generated_at_et": "2026-08-18 09:50 ET",
   "symbol": "CME_MINI:MNQ1!",
-  "price": 29698.75,
+  "price": 29675,
   "quote": {
     "success": true,
     "symbol": "CME_MINI:MNQ1!",
-    "time": 1787059200,
-    "open": 29699.5,
-    "high": 29699.75,
-    "low": 29696.5,
-    "close": 29698.75,
-    "last": 29698.75,
-    "volume": 310,
+    "time": 1787061000,
+    "open": 29657.25,
+    "high": 29683,
+    "low": 29649,
+    "close": 29675,
+    "last": 29675,
+    "volume": 9368,
     "description": "Micro E-mini Nasdaq-100 Index Futures",
     "exchange": "CME",
     "type": "futures"
@@ -256,19 +256,43 @@
         "price": 29726.75
       },
       "swing_low": {
-        "time": 1787058600,
-        "price": 29690.25
+        "time": 1787057100,
+        "price": 29680.75
       },
-      "sweep": null,
-      "watching": null,
+      "sweep": {
+        "direction": "down",
+        "time": 1787059800,
+        "extreme": 29631,
+        "swept_level": 29680.75
+      },
+      "watching": {
+        "model1": {
+          "model": "1",
+          "direction": "up",
+          "fvgs": [],
+          "mss": null,
+          "confirmed": false,
+          "signal_time": null,
+          "signal_price": null
+        },
+        "model2": {
+          "model": "2",
+          "direction": "up",
+          "fvgs": [],
+          "inversion_boundary": null,
+          "confirmed": false,
+          "signal_time": null,
+          "signal_price": null
+        }
+      },
       "signal": null,
       "trade": null,
-      "status": "waiting_for_sweep"
+      "status": "watching_for_reversal"
     }
   },
   "verdict": {
     "headline": "WATCHING",
-    "detail": "9:30 AM Open pre-session range",
+    "detail": "9:30 AM Open swept, awaiting reversal",
     "tone": "watching"
   },
   "news": []
