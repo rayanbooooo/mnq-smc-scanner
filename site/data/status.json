@@ -1,21 +1,18 @@
 {
-  "generated_at": "2026-08-18T03:07:35.263789+00:00",
-  "generated_at_et": "2026-08-17 23:07 ET",
+  "generated_at": "2026-08-18T06:19:34.810920+00:00",
+  "generated_at_et": "2026-08-18 02:19 ET",
   "symbol": "CME_MINI:MNQ1!",
-  "price": 29914,
+  "price": 29891.25,
   "quote": {
     "success": true,
     "symbol": "CME_MINI:MNQ1!",
-    "time": 1787021400,
-    "open": 29915.75,
-    "high": 29917,
-    "low": 29912,
-    "close": 29914,
-    "last": 29914,
-    "volume": 280,
-    "description": "Micro E-mini Nasdaq-100 Index Futures",
-    "exchange": "CME",
-    "type": "futures"
+    "time": 1787026200,
+    "open": 29896,
+    "high": 29898.5,
+    "low": 29889.5,
+    "close": 29891.25,
+    "last": 29891.25,
+    "volume": 1389
   },
   "trading_day": "2026-08-18",
   "windows": {
@@ -71,6 +68,12 @@
               "bottom": 29918,
               "time": 1787020800,
               "confirmed_at": 1787021100
+            },
+            {
+              "top": 29888.25,
+              "bottom": 29887.25,
+              "time": 1787022900,
+              "confirmed_at": 1787023200
             }
           ],
           "mss": {
@@ -120,6 +123,12 @@
             "bottom": 29918,
             "time": 1787020800,
             "confirmed_at": 1787021100
+          },
+          {
+            "top": 29888.25,
+            "bottom": 29887.25,
+            "time": 1787022900,
+            "confirmed_at": 1787023200
           }
         ],
         "mss": {
@@ -170,11 +179,23 @@
         "model1": {
           "model": "1",
           "direction": "up",
-          "fvgs": [],
-          "mss": null,
-          "confirmed": false,
-          "signal_time": null,
-          "signal_price": null
+          "fvgs": [
+            {
+              "top": 29885,
+              "bottom": 29879.5,
+              "time": 1787024100,
+              "confirmed_at": 1787024400
+            }
+          ],
+          "mss": {
+            "pivot_time": 1787017800,
+            "pivot_price": 29968.5,
+            "confirmed_at": 1787018400,
+            "confirmed_price": 30012
+          },
+          "confirmed": true,
+          "signal_time": 1787018400,
+          "signal_price": 30012
         },
         "model2": {
           "model": "2",
@@ -186,20 +207,54 @@
           "signal_price": null
         }
       },
-      "signal": null,
-      "trade": null,
-      "status": "watching_for_reversal"
+      "signal": {
+        "model": "1",
+        "direction": "up",
+        "fvgs": [
+          {
+            "top": 29885,
+            "bottom": 29879.5,
+            "time": 1787024100,
+            "confirmed_at": 1787024400
+          }
+        ],
+        "mss": {
+          "pivot_time": 1787017800,
+          "pivot_price": 29968.5,
+          "confirmed_at": 1787018400,
+          "confirmed_price": 30012
+        },
+        "confirmed": true,
+        "signal_time": 1787018400,
+        "signal_price": 30012
+      },
+      "trade": {
+        "model": "1",
+        "direction": "long",
+        "entry": 29879.5,
+        "entry_type": "limit_fvg",
+        "entry_signal_time": 1787018400,
+        "stop": 30070,
+        "breakeven_trigger": 30070.0,
+        "target": 30260.5,
+        "risk_points": 190.5,
+        "status": "stopped_out",
+        "be_moved": false,
+        "exit_price": 30070,
+        "exit_time": 1787021100
+      },
+      "status": "trade"
     },
     "930am": {
       "open_time": 1787059800,
       "search_end": 1787065200,
       "swing_high": {
-        "time": 1787020500,
-        "price": 29959.5
+        "time": 1787025000,
+        "price": 29915
       },
       "swing_low": {
-        "time": 1787017800,
-        "price": 29968.5
+        "time": 1787023800,
+        "price": 29853
       },
       "sweep": null,
       "watching": null,
@@ -209,9 +264,9 @@
     }
   },
   "verdict": {
-    "headline": "WATCHING",
-    "detail": "9:00 PM Open swept, awaiting reversal",
-    "tone": "watching"
+    "headline": "NO ACTIVE SETUP",
+    "detail": "No session currently in play",
+    "tone": "none"
   },
   "news": []
 }
