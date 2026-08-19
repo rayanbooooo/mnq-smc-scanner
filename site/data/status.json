@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-08-19T19:58:52.433004+00:00",
-  "generated_at_et": "2026-08-19 15:58 ET",
+  "generated_at": "2026-08-19T20:00:06.412917+00:00",
+  "generated_at_et": "2026-08-19 16:00 ET",
   "symbol": "CME_MINI:MNQ1!",
-  "price": 29517.5,
+  "price": 29532.75,
   "quote": {
     "success": true,
     "symbol": "CME_MINI:MNQ1!",
-    "time": 1787169300,
-    "open": 29511.5,
-    "high": 29520.5,
-    "low": 29488.75,
-    "close": 29517.5,
-    "last": 29517.5,
-    "volume": 17417,
+    "time": 1787169600,
+    "open": 29521.25,
+    "high": 29534.75,
+    "low": 29520.75,
+    "close": 29532.75,
+    "last": 29532.75,
+    "volume": 1928,
     "description": "Micro E-mini Nasdaq-100 Index Futures",
     "exchange": "CME",
     "type": "futures"
@@ -29,10 +29,7 @@
     "8pm": {
       "open_time": 1787097600,
       "search_end": 1787112000,
-      "swing_high": {
-        "time": 1787095200,
-        "price": 29568
-      },
+      "swing_high": null,
       "swing_low": {
         "time": 1787096100,
         "price": 29521
@@ -141,23 +138,11 @@
         "model1": {
           "model": "1",
           "direction": "down",
-          "fvgs": [
-            {
-              "top": 29538.5,
-              "bottom": 29527.5,
-              "time": 1787106600,
-              "confirmed_at": 1787106900
-            }
-          ],
-          "mss": {
-            "pivot_time": 1787102400,
-            "pivot_price": 29609.75,
-            "confirmed_at": 1787103000,
-            "confirmed_price": 29564
-          },
-          "confirmed": true,
-          "signal_time": 1787103000,
-          "signal_price": 29564
+          "fvgs": [],
+          "mss": null,
+          "confirmed": false,
+          "signal_time": null,
+          "signal_price": null
         },
         "model2": {
           "model": "2",
@@ -183,36 +168,37 @@
         }
       },
       "signal": {
-        "model": "1",
+        "model": "2",
         "direction": "down",
         "fvgs": [
           {
-            "top": 29538.5,
-            "bottom": 29527.5,
-            "time": 1787106600,
-            "confirmed_at": 1787106900
+            "top": 29570.75,
+            "bottom": 29565,
+            "time": 1787101200,
+            "confirmed_at": 1787101500
+          },
+          {
+            "top": 29580.75,
+            "bottom": 29575,
+            "time": 1787101500,
+            "confirmed_at": 1787101800
           }
         ],
-        "mss": {
-          "pivot_time": 1787102400,
-          "pivot_price": 29609.75,
-          "confirmed_at": 1787103000,
-          "confirmed_price": 29564
-        },
+        "inversion_boundary": 29565,
         "confirmed": true,
         "signal_time": 1787103000,
         "signal_price": 29564
       },
       "trade": {
-        "model": "1",
+        "model": "2",
         "direction": "short",
-        "entry": 29538.5,
-        "entry_type": "limit_fvg",
+        "entry": 29564,
+        "entry_type": "market_close",
         "entry_signal_time": 1787103000,
         "stop": 29604,
-        "breakeven_trigger": 29473.0,
-        "target": 29407.5,
-        "risk_points": 65.5,
+        "breakeven_trigger": 29524.0,
+        "target": 29484.0,
+        "risk_points": 40,
         "status": "overlap_skipped",
         "be_moved": false,
         "exit_price": 29604,
