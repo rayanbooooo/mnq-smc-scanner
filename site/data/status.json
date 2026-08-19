@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-08-18T23:59:51.267950+00:00",
-  "generated_at_et": "2026-08-18 19:59 ET",
+  "generated_at": "2026-08-19T00:01:06.254897+00:00",
+  "generated_at_et": "2026-08-18 20:01 ET",
   "symbol": "CME_MINI:MNQ1!",
-  "price": 29527.75,
+  "price": 29521.5,
   "quote": {
     "success": true,
     "symbol": "CME_MINI:MNQ1!",
-    "time": 1787097300,
-    "open": 29542.25,
-    "high": 29542.5,
-    "low": 29526.5,
-    "close": 29527.75,
-    "last": 29527.75,
-    "volume": 2205,
+    "time": 1787097600,
+    "open": 29527.5,
+    "high": 29529.25,
+    "low": 29518.5,
+    "close": 29521.5,
+    "last": 29521.5,
+    "volume": 2336,
     "description": "Micro E-mini Nasdaq-100 Index Futures",
     "exchange": "CME",
     "type": "futures"
@@ -37,18 +37,42 @@
         "time": 1787096100,
         "price": 29521
       },
-      "sweep": null,
-      "watching": null,
+      "sweep": {
+        "direction": "down",
+        "time": 1787097600,
+        "extreme": 29518.5,
+        "swept_level": 29521
+      },
+      "watching": {
+        "model1": {
+          "model": "1",
+          "direction": "up",
+          "fvgs": [],
+          "mss": null,
+          "confirmed": false,
+          "signal_time": null,
+          "signal_price": null
+        },
+        "model2": {
+          "model": "2",
+          "direction": "up",
+          "fvgs": [],
+          "inversion_boundary": null,
+          "confirmed": false,
+          "signal_time": null,
+          "signal_price": null
+        }
+      },
       "signal": null,
       "trade": null,
-      "status": "waiting_for_open"
+      "status": "watching_for_reversal"
     },
     "9pm": {
       "open_time": 1787101200,
       "search_end": 1787112000,
       "swing_high": {
-        "time": 1787095200,
-        "price": 29568
+        "time": 1787097000,
+        "price": 29554.25
       },
       "swing_low": {
         "time": 1787096100,
@@ -64,8 +88,8 @@
       "open_time": 1787146200,
       "search_end": 1787151600,
       "swing_high": {
-        "time": 1787095200,
-        "price": 29568
+        "time": 1787097000,
+        "price": 29554.25
       },
       "swing_low": {
         "time": 1787096100,
@@ -79,9 +103,9 @@
     }
   },
   "verdict": {
-    "headline": "NO ACTIVE SETUP",
-    "detail": "No session currently in play",
-    "tone": "none"
+    "headline": "WATCHING",
+    "detail": "8:00 PM Open swept, awaiting reversal",
+    "tone": "watching"
   },
   "news": []
 }
