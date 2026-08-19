@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-08-19T19:14:56.635472+00:00",
-  "generated_at_et": "2026-08-19 15:14 ET",
+  "generated_at": "2026-08-19T19:16:12.483553+00:00",
+  "generated_at_et": "2026-08-19 15:16 ET",
   "symbol": "CME_MINI:MNQ1!",
-  "price": 29548.75,
+  "price": 29557.5,
   "quote": {
     "success": true,
     "symbol": "CME_MINI:MNQ1!",
-    "time": 1787166600,
-    "open": 29556.5,
-    "high": 29559.25,
-    "low": 29544,
-    "close": 29548.75,
-    "last": 29548.75,
-    "volume": 6791,
+    "time": 1787166900,
+    "open": 29547.25,
+    "high": 29558.5,
+    "low": 29545.75,
+    "close": 29557.5,
+    "last": 29557.5,
+    "volume": 1962,
     "description": "Micro E-mini Nasdaq-100 Index Futures",
     "exchange": "CME",
     "type": "futures"
@@ -159,6 +159,12 @@
               "bottom": 29527.5,
               "time": 1787106600,
               "confirmed_at": 1787106900
+            },
+            {
+              "top": 29536.25,
+              "bottom": 29530.5,
+              "time": 1787110800,
+              "confirmed_at": 1787111100
             }
           ],
           "mss": {
@@ -215,6 +221,12 @@
             "bottom": 29527.5,
             "time": 1787106600,
             "confirmed_at": 1787106900
+          },
+          {
+            "top": 29536.25,
+            "bottom": 29530.5,
+            "time": 1787110800,
+            "confirmed_at": 1787111100
           }
         ],
         "mss": {
