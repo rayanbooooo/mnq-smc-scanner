@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-08-19T13:51:26.664218+00:00",
-  "generated_at_et": "2026-08-19 09:51 ET",
+  "generated_at": "2026-08-19T14:32:33.670906+00:00",
+  "generated_at_et": "2026-08-19 10:32 ET",
   "symbol": "CME_MINI:MNQ1!",
-  "price": 29744.5,
+  "price": 29500.5,
   "quote": {
     "success": true,
     "symbol": "CME_MINI:MNQ1!",
-    "time": 1787145600,
-    "open": 29720,
-    "high": 29748,
-    "low": 29714.75,
-    "close": 29744.5,
-    "last": 29744.5,
-    "volume": 6757,
+    "time": 1787149800,
+    "open": 29482.5,
+    "high": 29513,
+    "low": 29468,
+    "close": 29500.5,
+    "last": 29500.5,
+    "volume": 23062,
     "description": "Micro E-mini Nasdaq-100 Index Futures",
     "exchange": "CME",
     "type": "futures"
@@ -267,17 +267,94 @@
         "time": 1787144400,
         "price": 29679.75
       },
-      "sweep": null,
-      "watching": null,
-      "signal": null,
-      "trade": null,
-      "status": "waiting_for_sweep"
+      "sweep": {
+        "direction": "down",
+        "time": 1787146200,
+        "extreme": 29648.25,
+        "swept_level": 29679.75
+      },
+      "watching": {
+        "model1": {
+          "model": "1",
+          "direction": "up",
+          "fvgs": [
+            {
+              "top": 29468,
+              "bottom": 29457,
+              "time": 1787149500,
+              "confirmed_at": 1787149800
+            }
+          ],
+          "mss": {
+            "pivot_time": 1787147400,
+            "pivot_price": 29407.75,
+            "confirmed_at": 1787148000,
+            "confirmed_price": 29473
+          },
+          "confirmed": true,
+          "signal_time": 1787148000,
+          "signal_price": 29473
+        },
+        "model2": {
+          "model": "2",
+          "direction": "up",
+          "fvgs": [
+            {
+              "top": 29695.25,
+              "bottom": 29688,
+              "time": 1787146200,
+              "confirmed_at": 1787146500
+            }
+          ],
+          "inversion_boundary": 29695.25,
+          "confirmed": false,
+          "signal_time": null,
+          "signal_price": null
+        }
+      },
+      "signal": {
+        "model": "1",
+        "direction": "up",
+        "fvgs": [
+          {
+            "top": 29468,
+            "bottom": 29457,
+            "time": 1787149500,
+            "confirmed_at": 1787149800
+          }
+        ],
+        "mss": {
+          "pivot_time": 1787147400,
+          "pivot_price": 29407.75,
+          "confirmed_at": 1787148000,
+          "confirmed_price": 29473
+        },
+        "confirmed": true,
+        "signal_time": 1787148000,
+        "signal_price": 29473
+      },
+      "trade": {
+        "model": "1",
+        "direction": "long",
+        "entry": 29457,
+        "entry_type": "limit_fvg",
+        "entry_signal_time": 1787148000,
+        "stop": 29643.25,
+        "breakeven_trigger": 29643.25,
+        "target": 29829.5,
+        "risk_points": 186.25,
+        "status": "stopped_out",
+        "be_moved": false,
+        "exit_price": 29643.25,
+        "exit_time": 1787148000
+      },
+      "status": "trade"
     }
   },
   "verdict": {
-    "headline": "WATCHING",
-    "detail": "9:30 AM Open pre-session range",
-    "tone": "watching"
+    "headline": "NO ACTIVE SETUP",
+    "detail": "No session currently in play",
+    "tone": "none"
   },
   "news": []
 }
