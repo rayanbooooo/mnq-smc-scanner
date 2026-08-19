@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-08-19T19:48:48.353049+00:00",
-  "generated_at_et": "2026-08-19 15:48 ET",
+  "generated_at": "2026-08-19T19:50:02.407790+00:00",
+  "generated_at_et": "2026-08-19 15:50 ET",
   "symbol": "CME_MINI:MNQ1!",
-  "price": 29512,
+  "price": 29511.5,
   "quote": {
     "success": true,
     "symbol": "CME_MINI:MNQ1!",
-    "time": 1787168700,
-    "open": 29530.75,
-    "high": 29532.75,
-    "low": 29501,
-    "close": 29512,
-    "last": 29512,
-    "volume": 13827,
+    "time": 1787169000,
+    "open": 29511.5,
+    "high": 29511.5,
+    "low": 29511.5,
+    "close": 29511.5,
+    "last": 29511.5,
+    "volume": 1,
     "description": "Micro E-mini Nasdaq-100 Index Futures",
     "exchange": "CME",
     "type": "futures"
@@ -143,12 +143,6 @@
           "direction": "down",
           "fvgs": [
             {
-              "top": 29566.75,
-              "bottom": 29563.5,
-              "time": 1787104800,
-              "confirmed_at": 1787105100
-            },
-            {
               "top": 29538.5,
               "bottom": 29527.5,
               "time": 1787106600,
@@ -193,12 +187,6 @@
         "direction": "down",
         "fvgs": [
           {
-            "top": 29566.75,
-            "bottom": 29563.5,
-            "time": 1787104800,
-            "confirmed_at": 1787105100
-          },
-          {
             "top": 29538.5,
             "bottom": 29527.5,
             "time": 1787106600,
@@ -218,13 +206,13 @@
       "trade": {
         "model": "1",
         "direction": "short",
-        "entry": 29566.75,
+        "entry": 29538.5,
         "entry_type": "limit_fvg",
         "entry_signal_time": 1787103000,
         "stop": 29604,
-        "breakeven_trigger": 29529.5,
-        "target": 29492.25,
-        "risk_points": 37.25,
+        "breakeven_trigger": 29473.0,
+        "target": 29407.5,
+        "risk_points": 65.5,
         "status": "overlap_skipped",
         "be_moved": false,
         "exit_price": 29604,
