@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-08-19T03:38:34.021332+00:00",
-  "generated_at_et": "2026-08-18 23:38 ET",
+  "generated_at": "2026-08-19T06:41:53.007744+00:00",
+  "generated_at_et": "2026-08-19 02:41 ET",
   "symbol": "CME_MINI:MNQ1!",
-  "price": 29539.5,
+  "price": 29503.25,
   "quote": {
     "success": true,
     "symbol": "CME_MINI:MNQ1!",
-    "time": 1787107500,
-    "open": 29522.5,
-    "high": 29542.5,
-    "low": 29517.75,
-    "close": 29539.5,
-    "last": 29539.5,
-    "volume": 4401,
+    "time": 1787117400,
+    "open": 29508.25,
+    "high": 29512.25,
+    "low": 29496.25,
+    "close": 29503.25,
+    "last": 29503.25,
+    "volume": 1395,
     "description": "Micro E-mini Nasdaq-100 Index Futures",
     "exchange": "CME",
     "type": "futures"
@@ -113,10 +113,10 @@
         "breakeven_trigger": 29524.0,
         "target": 29568.0,
         "risk_points": 44,
-        "status": "pending_entry",
-        "be_moved": false,
-        "exit_price": null,
-        "exit_time": null
+        "status": "breakeven_exit",
+        "be_moved": true,
+        "exit_price": 29480,
+        "exit_time": 1787116500
       },
       "status": "trade"
     },
@@ -159,6 +159,12 @@
               "bottom": 29527.5,
               "time": 1787106600,
               "confirmed_at": 1787106900
+            },
+            {
+              "top": 29536.25,
+              "bottom": 29530.5,
+              "time": 1787110800,
+              "confirmed_at": 1787111100
             }
           ],
           "mss": {
@@ -215,6 +221,12 @@
             "bottom": 29527.5,
             "time": 1787106600,
             "confirmed_at": 1787106900
+          },
+          {
+            "top": 29536.25,
+            "bottom": 29530.5,
+            "time": 1787110800,
+            "confirmed_at": 1787111100
           }
         ],
         "mss": {
@@ -237,23 +249,23 @@
         "breakeven_trigger": 29529.5,
         "target": 29492.25,
         "risk_points": 37.25,
-        "status": "stopped_out",
+        "status": "overlap_skipped",
         "be_moved": false,
         "exit_price": 29604,
         "exit_time": 1787103000
       },
-      "status": "trade"
+      "status": "overlap_skipped"
     },
     "930am": {
       "open_time": 1787146200,
       "search_end": 1787151600,
       "swing_high": {
-        "time": 1787106300,
-        "price": 29564
+        "time": 1787115600,
+        "price": 29535
       },
       "swing_low": {
-        "time": 1787105700,
-        "price": 29520.5
+        "time": 1787116500,
+        "price": 29466
       },
       "sweep": null,
       "watching": null,
@@ -263,9 +275,9 @@
     }
   },
   "verdict": {
-    "headline": "LONG PENDING",
-    "detail": "8:00 PM Open \u00b7 Model 1",
-    "tone": "long"
+    "headline": "NO ACTIVE SETUP",
+    "detail": "No session currently in play",
+    "tone": "none"
   },
   "news": []
 }
