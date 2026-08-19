@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-08-19T02:19:55.408003+00:00",
-  "generated_at_et": "2026-08-18 22:19 ET",
+  "generated_at": "2026-08-19T03:38:34.021332+00:00",
+  "generated_at_et": "2026-08-18 23:38 ET",
   "symbol": "CME_MINI:MNQ1!",
-  "price": 29568.25,
+  "price": 29539.5,
   "quote": {
     "success": true,
     "symbol": "CME_MINI:MNQ1!",
-    "time": 1787104800,
-    "open": 29578.75,
-    "high": 29583.75,
-    "low": 29562,
-    "close": 29568.25,
-    "last": 29568.25,
-    "volume": 2429,
+    "time": 1787107500,
+    "open": 29522.5,
+    "high": 29542.5,
+    "low": 29517.75,
+    "close": 29539.5,
+    "last": 29539.5,
+    "volume": 4401,
     "description": "Micro E-mini Nasdaq-100 Index Futures",
     "exchange": "CME",
     "type": "futures"
@@ -141,11 +141,35 @@
         "model1": {
           "model": "1",
           "direction": "down",
-          "fvgs": [],
-          "mss": null,
-          "confirmed": false,
-          "signal_time": null,
-          "signal_price": null
+          "fvgs": [
+            {
+              "top": 29566.75,
+              "bottom": 29563.5,
+              "time": 1787104800,
+              "confirmed_at": 1787105100
+            },
+            {
+              "top": 29560.75,
+              "bottom": 29549,
+              "time": 1787105100,
+              "confirmed_at": 1787105400
+            },
+            {
+              "top": 29538.5,
+              "bottom": 29527.5,
+              "time": 1787106600,
+              "confirmed_at": 1787106900
+            }
+          ],
+          "mss": {
+            "pivot_time": 1787102400,
+            "pivot_price": 29609.75,
+            "confirmed_at": 1787103000,
+            "confirmed_price": 29564
+          },
+          "confirmed": true,
+          "signal_time": 1787103000,
+          "signal_price": 29564
         },
         "model2": {
           "model": "2",
@@ -171,37 +195,48 @@
         }
       },
       "signal": {
-        "model": "2",
+        "model": "1",
         "direction": "down",
         "fvgs": [
           {
-            "top": 29570.75,
-            "bottom": 29565,
-            "time": 1787101200,
-            "confirmed_at": 1787101500
+            "top": 29566.75,
+            "bottom": 29563.5,
+            "time": 1787104800,
+            "confirmed_at": 1787105100
           },
           {
-            "top": 29580.75,
-            "bottom": 29575,
-            "time": 1787101500,
-            "confirmed_at": 1787101800
+            "top": 29560.75,
+            "bottom": 29549,
+            "time": 1787105100,
+            "confirmed_at": 1787105400
+          },
+          {
+            "top": 29538.5,
+            "bottom": 29527.5,
+            "time": 1787106600,
+            "confirmed_at": 1787106900
           }
         ],
-        "inversion_boundary": 29565,
+        "mss": {
+          "pivot_time": 1787102400,
+          "pivot_price": 29609.75,
+          "confirmed_at": 1787103000,
+          "confirmed_price": 29564
+        },
         "confirmed": true,
         "signal_time": 1787103000,
         "signal_price": 29564
       },
       "trade": {
-        "model": "2",
+        "model": "1",
         "direction": "short",
-        "entry": 29564,
-        "entry_type": "market_close",
+        "entry": 29566.75,
+        "entry_type": "limit_fvg",
         "entry_signal_time": 1787103000,
         "stop": 29604,
-        "breakeven_trigger": 29524.0,
-        "target": 29484.0,
-        "risk_points": 40,
+        "breakeven_trigger": 29529.5,
+        "target": 29492.25,
+        "risk_points": 37.25,
         "status": "stopped_out",
         "be_moved": false,
         "exit_price": 29604,
@@ -213,12 +248,12 @@
       "open_time": 1787146200,
       "search_end": 1787151600,
       "swing_high": {
-        "time": 1787102400,
-        "price": 29609.75
+        "time": 1787106300,
+        "price": 29564
       },
       "swing_low": {
-        "time": 1787103900,
-        "price": 29562.5
+        "time": 1787105700,
+        "price": 29520.5
       },
       "sweep": null,
       "watching": null,
